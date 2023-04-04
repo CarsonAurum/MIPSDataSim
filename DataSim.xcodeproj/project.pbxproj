@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E531825729C93438004A9793 /* DataSimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531825629C93438004A9793 /* DataSimApp.swift */; };
-		E531825929C93438004A9793 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531825829C93438004A9793 /* ContentView.swift */; };
+		E531825929C93438004A9793 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531825829C93438004A9793 /* MainView.swift */; };
 		E531825B29C93439004A9793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531825A29C93439004A9793 /* Assets.xcassets */; };
 		E531825F29C93439004A9793 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531825E29C93439004A9793 /* Preview Assets.xcassets */; };
 		E531826929C9343A004A9793 /* DataSimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531826829C9343A004A9793 /* DataSimTests.swift */; };
 		E531827329C9343A004A9793 /* DataSimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531827229C9343A004A9793 /* DataSimUITests.swift */; };
 		E531827529C9343A004A9793 /* DataSimUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */; };
+		E531828429C9354E004A9793 /* ALUShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531828329C9354E004A9793 /* ALUShape.swift */; };
+		E538518829CB5C2000CF59DA /* AdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538518729CB5C2000CF59DA /* AdderView.swift */; };
+		E538518A29CB65C200CF59DA /* ALUView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538518929CB65C200CF59DA /* ALUView.swift */; };
+		E54F8B6429DB38EB00022498 /* WorkbenchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6329DB38EB00022498 /* WorkbenchView.swift */; };
+		E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6529DB3CB600022498 /* OptionsView.swift */; };
+		E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6729DB3D1F00022498 /* HelpView.swift */; };
+		E54F8B6A29DB3D5B00022498 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6929DB3D5B00022498 /* CreditsView.swift */; };
+		E54F8B6C29DBAF5000022498 /* DatapathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */; };
+		E574627129CB69E7005A3434 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627029CB69E7005A3434 /* Processor.swift */; };
+		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		E531825329C93438004A9793 /* DataSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E531825629C93438004A9793 /* DataSimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimApp.swift; sourceTree = "<group>"; };
-		E531825829C93438004A9793 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E531825829C93438004A9793 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E531825A29C93439004A9793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E531825C29C93439004A9793 /* DataSim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataSim.entitlements; sourceTree = "<group>"; };
 		E531825E29C93439004A9793 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +55,16 @@
 		E531826E29C9343A004A9793 /* DataSimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E531827229C9343A004A9793 /* DataSimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimUITests.swift; sourceTree = "<group>"; };
 		E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E531828329C9354E004A9793 /* ALUShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUShape.swift; sourceTree = "<group>"; };
+		E538518729CB5C2000CF59DA /* AdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderView.swift; sourceTree = "<group>"; };
+		E538518929CB65C200CF59DA /* ALUView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUView.swift; sourceTree = "<group>"; };
+		E54F8B6329DB38EB00022498 /* WorkbenchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchView.swift; sourceTree = "<group>"; };
+		E54F8B6529DB3CB600022498 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		E54F8B6729DB3D1F00022498 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		E54F8B6929DB3D5B00022498 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathComponent.swift; sourceTree = "<group>"; };
+		E574627029CB69E7005A3434 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +115,10 @@
 		E531825529C93438004A9793 /* DataSim */ = {
 			isa = PBXGroup;
 			children = (
-				E531825629C93438004A9793 /* DataSimApp.swift */,
-				E531825829C93438004A9793 /* ContentView.swift */,
+				E531828229C934F8004A9793 /* App */,
+				E574627229CB6A80005A3434 /* Processor */,
+				E531828729C94165004A9793 /* Shapes */,
+				E531828129C934EF004A9793 /* Views */,
 				E531825A29C93439004A9793 /* Assets.xcassets */,
 				E531825C29C93439004A9793 /* DataSim.entitlements */,
 				E531825D29C93439004A9793 /* Preview Content */,
@@ -127,6 +149,54 @@
 				E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */,
 			);
 			path = DataSimUITests;
+			sourceTree = "<group>";
+		};
+		E531828129C934EF004A9793 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E574626F29CB6929005A3434 /* Datapath */,
+				E531825829C93438004A9793 /* MainView.swift */,
+				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
+				E54F8B6529DB3CB600022498 /* OptionsView.swift */,
+				E54F8B6729DB3D1F00022498 /* HelpView.swift */,
+				E54F8B6929DB3D5B00022498 /* CreditsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E531828229C934F8004A9793 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E531825629C93438004A9793 /* DataSimApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E531828729C94165004A9793 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				E531828329C9354E004A9793 /* ALUShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		E574626F29CB6929005A3434 /* Datapath */ = {
+			isa = PBXGroup;
+			children = (
+				E538518729CB5C2000CF59DA /* AdderView.swift */,
+				E538518929CB65C200CF59DA /* ALUView.swift */,
+			);
+			path = Datapath;
+			sourceTree = "<group>";
+		};
+		E574627229CB6A80005A3434 /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				E574627029CB69E7005A3434 /* Processor.swift */,
+				E574627329CB6AA6005A3434 /* Instruction.swift */,
+				E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */,
+			);
+			path = Processor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E531825929C93438004A9793 /* ContentView.swift in Sources */,
+				E54F8B6C29DBAF5000022498 /* DatapathComponent.swift in Sources */,
+				E574627129CB69E7005A3434 /* Processor.swift in Sources */,
+				E54F8B6A29DB3D5B00022498 /* CreditsView.swift in Sources */,
+				E531825929C93438004A9793 /* MainView.swift in Sources */,
+				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
+				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,
+				E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */,
+				E574627429CB6AA6005A3434 /* Instruction.swift in Sources */,
+				E538518A29CB65C200CF59DA /* ALUView.swift in Sources */,
+				E54F8B6429DB38EB00022498 /* WorkbenchView.swift in Sources */,
 				E531825729C93438004A9793 /* DataSimApp.swift in Sources */,
+				E538518829CB5C2000CF59DA /* AdderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DataSim/Preview Content\"";
+				DEVELOPMENT_TEAM = ZTSVWKU48B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -423,10 +504,10 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -435,7 +516,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DataSim/Preview Content\"";
+				DEVELOPMENT_TEAM = ZTSVWKU48B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -459,10 +543,10 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -471,7 +555,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

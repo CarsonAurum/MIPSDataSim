@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct DataSimApp: App {
+    @State var color: Color = .gray
+    init() {
+        
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
