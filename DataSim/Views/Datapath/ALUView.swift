@@ -13,11 +13,11 @@ struct ALUView: View {
     private let hasLines: Bool
     private let color: Color
     private let secondaryColor: Color
-    init(_ hasLines: Bool = true,
+    init(_ showLines: Bool = true,
          color: Color = .black,
-         secondaryColor: Color = .black
+         secondaryColor: Color = .gray
     ) {
-        self.hasLines = hasLines
+        self.hasLines = showLines
         self.color = color
         self.secondaryColor = secondaryColor
     }
@@ -39,7 +39,7 @@ struct ALUCircleView: View {
     private let color: Color
     private let secondaryColor: Color
     
-    init(color: Color = .black, secondaryColor: Color = .black) {
+    init(color: Color = .black, secondaryColor: Color = .gray) {
         self.color = color
         self.secondaryColor = secondaryColor
     }
@@ -90,7 +90,7 @@ struct ALUCircleView: View {
     }
 }
 
-// Should be square
+/// - Note: Should be square
 struct ALULineView: View {
     
     private let color: Color
@@ -101,6 +101,13 @@ struct ALULineView: View {
     var body: some View {
         GeometryReader { proxy in
             ZStack {
+                ALUShape()
+                    .fill(self.color)
+                    .allowsHitTesting(true)
+                    .frame(width: proxy.size.width / 2,
+                           height: proxy.size.height)
+                    .position(x: proxy.size.width / 2,
+                              y: proxy.size.height / 2)
                 // Top left
                 Rectangle()
                     .fill(self.color)
@@ -133,12 +140,6 @@ struct ALULineView: View {
                            height: proxy.size.height / 40)
                     .position(x: proxy.size.width - (proxy.size.width / 8),
                               y: (proxy.size.height / 8) * 5)
-                ALUShape()
-                    .fill(self.color)
-                    .frame(width: proxy.size.width / 2,
-                           height: proxy.size.height)
-                    .position(x: proxy.size.width / 2,
-                              y: proxy.size.height / 2)
             }
         }
     }
@@ -146,9 +147,7 @@ struct ALULineView: View {
 
 struct ALUView_Previews: PreviewProvider {
     static var previews: some View {
-        ALUView(false,
-                color: .init(.lightGray),
-                secondaryColor: .init(.gray))
+        ALUView(false)
             .frame(width: 200, height: 200)
 //            .border(.blue, width: 5)
     }
