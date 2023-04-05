@@ -9,12 +9,30 @@ import SwiftUI
 
 struct SignExtenderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geo in
+            Ellipse()
+                .frame(width: geo.size.width / 5 * 3, height: geo.size.height)
+                .position(x: geo.size.width / 2, y: geo.size.height / 2)
+            Rectangle()
+                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
+            Rectangle()
+                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
+            Rectangle()
+                .fill(.green)
+                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
+                .position(x: geo.size.width / 12, y: geo.size.height / 2)
+            Rectangle()
+                .fill(.blue)
+                .frame(width: geo.size.width / 4, height: geo.size.height / 40)
+                .position(x: geo.size.width / 8, y: geo.size.height / 2)
+        }
     }
 }
 
 struct SignExtenderView_Previews: PreviewProvider {
     static var previews: some View {
         SignExtenderView()
+            .frame(width: 200, height: 200)
+            .border(.blue, width: 1)
     }
 }

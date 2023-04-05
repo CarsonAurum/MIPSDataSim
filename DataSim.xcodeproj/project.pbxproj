@@ -24,6 +24,8 @@
 		E54F8B6C29DBAF5000022498 /* DatapathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */; };
 		E54F8B6E29DDFD7300022498 /* MuxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6D29DDFD7300022498 /* MuxView.swift */; };
 		E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6F29DE037200022498 /* SignExtenderView.swift */; };
+		E54F8B7429DE098D00022498 /* ALU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7329DE098C00022498 /* ALU.swift */; };
+		E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7529DE0A4300022498 /* DatapathElement.swift */; };
 		E574627129CB69E7005A3434 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627029CB69E7005A3434 /* Processor.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathComponent.swift; sourceTree = "<group>"; };
 		E54F8B6D29DDFD7300022498 /* MuxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxView.swift; sourceTree = "<group>"; };
 		E54F8B6F29DE037200022498 /* SignExtenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignExtenderView.swift; sourceTree = "<group>"; };
+		E54F8B7329DE098C00022498 /* ALU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALU.swift; sourceTree = "<group>"; };
+		E54F8B7529DE0A4300022498 /* DatapathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathElement.swift; sourceTree = "<group>"; };
 		E574627029CB69E7005A3434 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				E531828229C934F8004A9793 /* App */,
+				E54F8B7229DE090400022498 /* Datapath */,
 				E574627229CB6A80005A3434 /* Processor */,
-				E531828729C94165004A9793 /* Shapes */,
 				E531828129C934EF004A9793 /* Views */,
 				E531825A29C93439004A9793 /* Assets.xcassets */,
 				E531825C29C93439004A9793 /* DataSim.entitlements */,
@@ -158,6 +162,7 @@
 		E531828129C934EF004A9793 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E531828729C94165004A9793 /* Shapes */,
 				E574626F29CB6929005A3434 /* Datapath */,
 				E531825829C93438004A9793 /* MainView.swift */,
 				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
@@ -184,6 +189,16 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		E54F8B7229DE090400022498 /* Datapath */ = {
+			isa = PBXGroup;
+			children = (
+				E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */,
+				E54F8B7329DE098C00022498 /* ALU.swift */,
+				E54F8B7529DE0A4300022498 /* DatapathElement.swift */,
+			);
+			path = Datapath;
+			sourceTree = "<group>";
+		};
 		E574626F29CB6929005A3434 /* Datapath */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +215,6 @@
 			children = (
 				E574627029CB69E7005A3434 /* Processor.swift */,
 				E574627329CB6AA6005A3434 /* Instruction.swift */,
-				E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */,
 			);
 			path = Processor;
 			sourceTree = "<group>";
@@ -336,9 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54F8B6C29DBAF5000022498 /* DatapathComponent.swift in Sources */,
+				E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */,
 				E574627129CB69E7005A3434 /* Processor.swift in Sources */,
 				E54F8B6E29DDFD7300022498 /* MuxView.swift in Sources */,
 				E54F8B6A29DB3D5B00022498 /* CreditsView.swift in Sources */,
+				E54F8B7429DE098D00022498 /* ALU.swift in Sources */,
 				E531825929C93438004A9793 /* MainView.swift in Sources */,
 				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
 				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,

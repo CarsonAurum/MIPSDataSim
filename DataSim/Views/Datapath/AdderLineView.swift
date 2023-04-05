@@ -12,7 +12,7 @@ struct AdderView: View {
     private let showLines: Bool
     private let color: Color
     private let secondaryColor: Color
-    init(_ showLines: Bool = true,
+    init(showLines: Bool = true,
          color: Color = .black,
          secondaryColor: Color = .gray) {
         self.showLines = showLines
@@ -106,7 +106,7 @@ struct AdderLineView: View {
 
 struct AdderView_Previews: PreviewProvider {
     static var previews: some View {
-        AdderView(false)
+        AdderView(showLines: false)
             .frame(width: 200, height: 200)
 //            .border(.blue, width: 5)
     }

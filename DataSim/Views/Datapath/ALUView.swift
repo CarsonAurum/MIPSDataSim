@@ -13,7 +13,7 @@ struct ALUView: View {
     private let hasLines: Bool
     private let color: Color
     private let secondaryColor: Color
-    init(_ showLines: Bool = true,
+    init(showLines: Bool = true,
          color: Color = .black,
          secondaryColor: Color = .gray
     ) {
@@ -147,7 +147,7 @@ struct ALULineView: View {
 
 struct ALUView_Previews: PreviewProvider {
     static var previews: some View {
-        ALUView(false)
+        ALUView(showLines: false)
             .frame(width: 200, height: 200)
 //            .border(.blue, width: 5)
     }

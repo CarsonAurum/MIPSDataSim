@@ -7,14 +7,15 @@
 
 import SwiftUI
 
+// A half-size datapath element: the mux. Should still be square.
 struct MuxView: View {
     private let hasLines: Bool
     private let color: Color
     private let secondaryColor: Color
-    init(_ hasLines: Bool = true,
+    init(showLines: Bool = true,
          color: Color = .black,
          secondaryColor: Color = .gray) {
-        self.hasLines = hasLines
+        self.hasLines = showLines
         self.color = color
         self.secondaryColor = secondaryColor
     }
@@ -103,8 +104,8 @@ struct MuxLineView: View {
 
 struct MuxView_Previews: PreviewProvider {
     static var previews: some View {
-        MuxView(false)
-            .frame(width: 200, height: 200)
+        MuxView()
+            .frame(width: 100, height: 100)
 //            .border(.blue, width: 1)
     }
 }

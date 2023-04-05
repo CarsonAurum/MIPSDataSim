@@ -12,6 +12,8 @@ struct WorkbenchView: View {
     @Environment(\.dismiss) private var dismissal
     
     @State private var isPaused: Bool = false
+    @State private var scale: Double = 1.0
+    @State private var lastScale: Double = 1.0
     
     var body: some View {
         GeometryReader { geo in
@@ -24,6 +26,10 @@ struct WorkbenchView: View {
                     ScrollView([.horizontal], showsIndicators: false) {
                         HStack {
                             ALUView(color: .black)
+                                .aspectRatio(contentMode: .fit)
+                            AdderView(color: .black)
+                                .aspectRatio(contentMode: .fit)
+                            MuxView(color: .black)
                                 .aspectRatio(contentMode: .fit)
                         }
                     }
