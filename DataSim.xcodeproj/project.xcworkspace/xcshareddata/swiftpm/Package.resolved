@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "novacore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CarsonAurum/NovaCore",
+      "state" : {
+        "branch" : "main",
+        "revision" : "eb8038c8f4a40a4a580b299a2dee87bda08e3b10"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "branch" : "main",
+        "revision" : "97c716ba37f8c79ed5ae20f9fd3c378360bd3cce"
+      }
+    }
+  ],
+  "version" : 2
+}
