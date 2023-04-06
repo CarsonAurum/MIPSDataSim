@@ -131,8 +131,8 @@ struct AdderLineView: View {
 
 struct AdderView_Previews: PreviewProvider {
     static var previews: some View {
-        AdderView(showLines: false)
+        AdderView(showLines: true)
             .frame(width: 200, height: 200)
-//            .border(.blue, width: 5)
+            .border(.blue, width: 1)
     }
 }
