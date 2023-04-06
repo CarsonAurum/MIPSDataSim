@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct DataSimApp: App {
     @State var color: Color = .gray
-    init() {
-        
-    }
+    @StateObject var processor: MIPSProcessor = .init()
+
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(processor)
         }
     }
 }

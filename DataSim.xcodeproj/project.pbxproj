@@ -27,6 +27,7 @@
 		E54F8B7429DE098D00022498 /* ALU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7329DE098C00022498 /* ALU.swift */; };
 		E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7529DE0A4300022498 /* DatapathElement.swift */; };
 		E54F8B7A29DE58F100022498 /* DatapathElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7929DE58F100022498 /* DatapathElementView.swift */; };
+		E54F8B7E29DF381600022498 /* NovaCore in Frameworks */ = {isa = PBXBuildFile; productRef = E54F8B7D29DF381600022498 /* NovaCore */; };
 		E574627129CB69E7005A3434 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627029CB69E7005A3434 /* Processor.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54F8B7E29DF381600022498 /* NovaCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +240,9 @@
 			dependencies = (
 			);
 			name = DataSim;
+			packageProductDependencies = (
+				E54F8B7D29DF381600022498 /* NovaCore */,
+			);
 			productName = DataSim;
 			productReference = E531825329C93438004A9793 /* DataSim.app */;
 			productType = "com.apple.product-type.application";
@@ -310,6 +315,9 @@
 				Base,
 			);
 			mainGroup = E531824A29C93438004A9793;
+			packageReferences = (
+				E54F8B7C29DF381600022498 /* XCRemoteSwiftPackageReference "NovaCore" */,
+			);
 			productRefGroup = E531825429C93438004A9793 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -718,6 +726,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E54F8B7C29DF381600022498 /* XCRemoteSwiftPackageReference "NovaCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CarsonAurum/NovaCore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E54F8B7D29DF381600022498 /* NovaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E54F8B7C29DF381600022498 /* XCRemoteSwiftPackageReference "NovaCore" */;
+			productName = NovaCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E531824B29C93438004A9793 /* Project object */;
 }

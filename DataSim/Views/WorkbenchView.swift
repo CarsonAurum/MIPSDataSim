@@ -6,21 +6,28 @@
 //
 
 import SwiftUI
+import NovaCore
 
 struct WorkbenchView: View {
     
     @Environment(\.dismiss) private var dismissal
+    @Environment(\.verticalSizeClass) private var vClass
+    
+    @EnvironmentObject private var processor: MIPSProcessor
     
     @State private var isPaused: Bool = false
     @State private var scale: Double = 1.0
     @State private var lastScale: Double = 1.0
-    
     var body: some View {
         GeometryReader { geo in
             ZStack {
                 VStack {
                     ScrollView([.horizontal, .vertical],
                                showsIndicators: false) {
+                        ForEach(processor.datapathElements) { elem in
+                            DatapathElementView(obj: elem)
+                                .frame(minWidth: geo.size.width / 15, minHeight: geo.size.width / 15)
+                        }
                     }
                     Divider()
                     ScrollView([.horizontal], showsIndicators: false) {
@@ -30,13 +37,25 @@ struct WorkbenchView: View {
                                 VStack {
                                     DatapathElementView(comp)
                                         .aspectRatio(contentMode: .fit)
+                                        .onTapGesture {
+                                            switch comp {
+                                            case .alu:
+                                                processor.datapathElements += ALU()
+                                            default:
+                                                return
+                                            }
+                                        }
                                     Text(comp.rawValue)
                                         .font(.caption)
                                 }
                             }
+                            Divider()
+                            Spacer()
                         }
                     }
-                    .frame(maxHeight: geo.size.height / 5)
+                    .padding(.horizontal, 5.0)
+                    .frame(maxHeight: (vClass == .compact) ?
+                           geo.size.height / 5 : geo.size.height / 10)
                 }
                 Button (action: {
                     isPaused.toggle()
@@ -55,8 +74,10 @@ struct WorkbenchView: View {
 }
 
 struct Workbench_Previews: PreviewProvider {
+    @State static var testProcessor: MIPSProcessor = .init()
     static var previews: some View {
         WorkbenchView()
+            .environmentObject(testProcessor)
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

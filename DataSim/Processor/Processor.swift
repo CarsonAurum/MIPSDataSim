@@ -8,5 +8,5 @@
 import SwiftUI
 
 class MIPSProcessor: ObservableObject {
-    
+    @Published var datapathElements: [DatapathElement] = .init()
 }
