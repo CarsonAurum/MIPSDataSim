@@ -26,6 +26,7 @@
 		E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6F29DE037200022498 /* SignExtenderView.swift */; };
 		E54F8B7429DE098D00022498 /* ALU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7329DE098C00022498 /* ALU.swift */; };
 		E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7529DE0A4300022498 /* DatapathElement.swift */; };
+		E54F8B7A29DE58F100022498 /* DatapathElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7929DE58F100022498 /* DatapathElementView.swift */; };
 		E574627129CB69E7005A3434 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627029CB69E7005A3434 /* Processor.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		E54F8B6F29DE037200022498 /* SignExtenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignExtenderView.swift; sourceTree = "<group>"; };
 		E54F8B7329DE098C00022498 /* ALU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALU.swift; sourceTree = "<group>"; };
 		E54F8B7529DE0A4300022498 /* DatapathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathElement.swift; sourceTree = "<group>"; };
+		E54F8B7929DE58F100022498 /* DatapathElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathElementView.swift; sourceTree = "<group>"; };
 		E574627029CB69E7005A3434 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +208,7 @@
 				E538518929CB65C200CF59DA /* ALUView.swift */,
 				E54F8B6D29DDFD7300022498 /* MuxView.swift */,
 				E54F8B6F29DE037200022498 /* SignExtenderView.swift */,
+				E54F8B7929DE58F100022498 /* DatapathElementView.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
 				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,
 				E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */,
+				E54F8B7A29DE58F100022498 /* DatapathElementView.swift in Sources */,
 				E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */,
 				E574627429CB6AA6005A3434 /* Instruction.swift in Sources */,
 				E538518A29CB65C200CF59DA /* ALUView.swift in Sources */,

@@ -25,29 +25,14 @@ struct WorkbenchView: View {
                     Divider()
                     ScrollView([.horizontal], showsIndicators: false) {
                         HStack {
-                            VStack {
-                                ALUView(color: .black)
-                                    .aspectRatio(contentMode: .fit)
-                                Text("ALU")
-                                    .font(.caption)
-                            }
-                            VStack {
-                                AdderView(color: .black)
-                                    .aspectRatio(contentMode: .fit)
-                                Text("Adder")
-                                    .font(.caption)
-                            }
-                            VStack {
-                                MuxView(color: .black)
-                                    .aspectRatio(contentMode: .fit)
-                                Text("Mux")
-                                    .font(.caption)
-                            }
-                            VStack {
-                                SignExtenderView()
-                                    .aspectRatio(contentMode: .fit)
-                                Text("Sign Ext")
-                                    .font(.caption)
+                            ForEach(DatapathComponent.allCases,
+                                    id: \.self) { comp in
+                                VStack {
+                                    DatapathElementView(comp)
+                                        .aspectRatio(contentMode: .fit)
+                                    Text(comp.rawValue)
+                                        .font(.caption)
+                                }
                             }
                         }
                     }
