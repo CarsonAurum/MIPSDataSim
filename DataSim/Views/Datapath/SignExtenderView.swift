@@ -11,20 +11,29 @@ struct SignExtenderView: View {
     var body: some View {
         GeometryReader { geo in
             Ellipse()
+                .allowsHitTesting(true)
                 .frame(width: geo.size.width / 5 * 3, height: geo.size.height)
                 .position(x: geo.size.width / 2, y: geo.size.height / 2)
             Rectangle()
-                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
+                .allowsHitTesting(false)
+                .frame(width: geo.size.width / 4, height: geo.size.height / 40)
+                .position(x: geo.size.width - (geo.size.width / 8),
+                          y: geo.size.height / 2)
             Rectangle()
-                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
-            Rectangle()
-                .fill(.green)
-                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
-                .position(x: geo.size.width / 12, y: geo.size.height / 2)
-            Rectangle()
-                .fill(.blue)
+                .allowsHitTesting(false)
                 .frame(width: geo.size.width / 4, height: geo.size.height / 40)
                 .position(x: geo.size.width / 8, y: geo.size.height / 2)
+            Rectangle()
+                .rotation(.degrees(45))
+                .allowsHitTesting(false)
+                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
+                .position(x: geo.size.width / 8, y: geo.size.height / 2)
+            Rectangle()
+                .rotation(.degrees(45))
+                .allowsHitTesting(false)
+                .frame(width: geo.size.width / 6, height: geo.size.height / 40)
+                .position(x: geo.size.width - (geo.size.width / 8),
+                          y: geo.size.height / 2)
         }
     }
 }
@@ -33,6 +42,6 @@ struct SignExtenderView_Previews: PreviewProvider {
     static var previews: some View {
         SignExtenderView()
             .frame(width: 200, height: 200)
-            .border(.blue, width: 1)
+//            .border(.blue, width: 1)
     }
 }

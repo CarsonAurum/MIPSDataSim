@@ -10,6 +10,9 @@ import Foundation
 class ALU: DatapathElement, Identifiable, ObservableObject {
     var id: UUID = .init()
     var componentType: DatapathComponent { .alu }
+    var fullName: String { "Arithmetic Logic Unit" }
+    var shortName: String { "ALU" }
+    
     @Published var inputA: DatapathComponent? = nil
     @Published var inputB: DatapathComponent? = nil
     @Published var outputA: DatapathComponent? = nil

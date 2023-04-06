@@ -147,7 +147,7 @@ struct ALULineView: View {
 
 struct ALUView_Previews: PreviewProvider {
     static var previews: some View {
-        ALUView(showLines: false)
+        ALUView(showLines: true)
             .frame(width: 200, height: 200)
 //            .border(.blue, width: 5)
     }

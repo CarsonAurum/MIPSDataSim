@@ -25,12 +25,30 @@ struct WorkbenchView: View {
                     Divider()
                     ScrollView([.horizontal], showsIndicators: false) {
                         HStack {
-                            ALUView(color: .black)
-                                .aspectRatio(contentMode: .fit)
-                            AdderView(color: .black)
-                                .aspectRatio(contentMode: .fit)
-                            MuxView(color: .black)
-                                .aspectRatio(contentMode: .fit)
+                            VStack {
+                                ALUView(color: .black)
+                                    .aspectRatio(contentMode: .fit)
+                                Text("ALU")
+                                    .font(.caption)
+                            }
+                            VStack {
+                                AdderView(color: .black)
+                                    .aspectRatio(contentMode: .fit)
+                                Text("Adder")
+                                    .font(.caption)
+                            }
+                            VStack {
+                                MuxView(color: .black)
+                                    .aspectRatio(contentMode: .fit)
+                                Text("Mux")
+                                    .font(.caption)
+                            }
+                            VStack {
+                                SignExtenderView()
+                                    .aspectRatio(contentMode: .fit)
+                                Text("Sign Ext")
+                                    .font(.caption)
+                            }
                         }
                     }
                     .frame(maxHeight: geo.size.height / 5)

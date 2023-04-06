@@ -9,4 +9,6 @@ import Foundation
 
 protocol DatapathElement {
     var componentType: DatapathComponent { get }
+    var fullName: String { get }
+    var shortName: String { get }
 }
