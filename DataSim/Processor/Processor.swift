@@ -8,5 +8,10 @@
 import SwiftUI
 
 class MIPSProcessor: ObservableObject {
-    @Published var datapathElements: [DatapathElement] = .init()
+    @Published var selectedElement: (UUID, DatapathComponent)?
+    
+    @Published var alus: [ALU] = [.init(), .init()]
+    @Published var adders: [Adder] = .init()
+    // @Published var signExtenders: [SignExtender]
+    
 }

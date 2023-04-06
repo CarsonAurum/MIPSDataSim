@@ -24,10 +24,12 @@ struct WorkbenchView: View {
                 VStack {
                     ScrollView([.horizontal, .vertical],
                                showsIndicators: false) {
-                        ForEach(processor.datapathElements) { elem in
-                            DatapathElementView(obj: elem)
-                                .frame(minWidth: geo.size.width / 15, minHeight: geo.size.width / 15)
-                        }
+                        ALUView(processor.alus[0])
+                            .frame(width: 200, height: 200)
+                            .position(x: 600, y: 600)
+                        ALUView(processor.alus[1])
+                            .frame(width: 200, height: 200)
+                            .position(x: 300, y: 300)
                     }
                     Divider()
                     ScrollView([.horizontal], showsIndicators: false) {
@@ -35,16 +37,8 @@ struct WorkbenchView: View {
                             ForEach(DatapathComponent.allCases,
                                     id: \.self) { comp in
                                 VStack {
-                                    DatapathElementView(comp)
+                                    DatapathElementPreviewView(comp)
                                         .aspectRatio(contentMode: .fit)
-                                        .onTapGesture {
-                                            switch comp {
-                                            case .alu:
-                                                processor.datapathElements += ALU()
-                                            default:
-                                                return
-                                            }
-                                        }
                                     Text(comp.rawValue)
                                         .font(.caption)
                                 }
@@ -58,8 +52,9 @@ struct WorkbenchView: View {
                            geo.size.height / 5 : geo.size.height / 10)
                 }
                 Button (action: {
-                    isPaused.toggle()
-                    dismissal()
+                    // isPaused.toggle()
+                   // dismissal()
+                    print(processor.alus.first!.outputA.1!.rawValue)
                 }) {
                     Image(systemName: "pause.fill")
                         .foregroundColor(isPaused ? .gray : .blue)

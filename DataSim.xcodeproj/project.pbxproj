@@ -15,19 +15,19 @@
 		E531827329C9343A004A9793 /* DataSimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531827229C9343A004A9793 /* DataSimUITests.swift */; };
 		E531827529C9343A004A9793 /* DataSimUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */; };
 		E531828429C9354E004A9793 /* ALUShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531828329C9354E004A9793 /* ALUShape.swift */; };
-		E538518829CB5C2000CF59DA /* AdderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538518729CB5C2000CF59DA /* AdderLineView.swift */; };
 		E538518A29CB65C200CF59DA /* ALUView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538518929CB65C200CF59DA /* ALUView.swift */; };
 		E54F8B6429DB38EB00022498 /* WorkbenchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6329DB38EB00022498 /* WorkbenchView.swift */; };
 		E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6529DB3CB600022498 /* OptionsView.swift */; };
 		E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6729DB3D1F00022498 /* HelpView.swift */; };
 		E54F8B6A29DB3D5B00022498 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6929DB3D5B00022498 /* CreditsView.swift */; };
-		E54F8B6C29DBAF5000022498 /* DatapathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */; };
 		E54F8B6E29DDFD7300022498 /* MuxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6D29DDFD7300022498 /* MuxView.swift */; };
 		E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6F29DE037200022498 /* SignExtenderView.swift */; };
 		E54F8B7429DE098D00022498 /* ALU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7329DE098C00022498 /* ALU.swift */; };
 		E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7529DE0A4300022498 /* DatapathElement.swift */; };
-		E54F8B7A29DE58F100022498 /* DatapathElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7929DE58F100022498 /* DatapathElementView.swift */; };
 		E54F8B7E29DF381600022498 /* NovaCore in Frameworks */ = {isa = PBXBuildFile; productRef = E54F8B7D29DF381600022498 /* NovaCore */; };
+		E54F8B8029DF60E900022498 /* Adder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B7F29DF60E900022498 /* Adder.swift */; };
+		E54F8B8229DF6D3200022498 /* DatapathElementPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B8129DF6D3200022498 /* DatapathElementPreviewView.swift */; };
+		E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B8329DF6DC900022498 /* AdderView.swift */; };
 		E574627129CB69E7005A3434 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627029CB69E7005A3434 /* Processor.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 /* End PBXBuildFile section */
@@ -62,18 +62,18 @@
 		E531827229C9343A004A9793 /* DataSimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimUITests.swift; sourceTree = "<group>"; };
 		E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E531828329C9354E004A9793 /* ALUShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUShape.swift; sourceTree = "<group>"; };
-		E538518729CB5C2000CF59DA /* AdderLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderLineView.swift; sourceTree = "<group>"; };
 		E538518929CB65C200CF59DA /* ALUView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUView.swift; sourceTree = "<group>"; };
 		E54F8B6329DB38EB00022498 /* WorkbenchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchView.swift; sourceTree = "<group>"; };
 		E54F8B6529DB3CB600022498 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		E54F8B6729DB3D1F00022498 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		E54F8B6929DB3D5B00022498 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
-		E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathComponent.swift; sourceTree = "<group>"; };
 		E54F8B6D29DDFD7300022498 /* MuxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxView.swift; sourceTree = "<group>"; };
 		E54F8B6F29DE037200022498 /* SignExtenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignExtenderView.swift; sourceTree = "<group>"; };
 		E54F8B7329DE098C00022498 /* ALU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALU.swift; sourceTree = "<group>"; };
 		E54F8B7529DE0A4300022498 /* DatapathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathElement.swift; sourceTree = "<group>"; };
-		E54F8B7929DE58F100022498 /* DatapathElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathElementView.swift; sourceTree = "<group>"; };
+		E54F8B7F29DF60E900022498 /* Adder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adder.swift; sourceTree = "<group>"; };
+		E54F8B8129DF6D3200022498 /* DatapathElementPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatapathElementPreviewView.swift; sourceTree = "<group>"; };
+		E54F8B8329DF6DC900022498 /* AdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderView.swift; sourceTree = "<group>"; };
 		E574627029CB69E7005A3434 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,9 +196,9 @@
 		E54F8B7229DE090400022498 /* Datapath */ = {
 			isa = PBXGroup;
 			children = (
-				E54F8B6B29DBAF5000022498 /* DatapathComponent.swift */,
 				E54F8B7329DE098C00022498 /* ALU.swift */,
 				E54F8B7529DE0A4300022498 /* DatapathElement.swift */,
+				E54F8B7F29DF60E900022498 /* Adder.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -206,11 +206,11 @@
 		E574626F29CB6929005A3434 /* Datapath */ = {
 			isa = PBXGroup;
 			children = (
-				E538518729CB5C2000CF59DA /* AdderLineView.swift */,
 				E538518929CB65C200CF59DA /* ALUView.swift */,
 				E54F8B6D29DDFD7300022498 /* MuxView.swift */,
 				E54F8B6F29DE037200022498 /* SignExtenderView.swift */,
-				E54F8B7929DE58F100022498 /* DatapathElementView.swift */,
+				E54F8B8129DF6D3200022498 /* DatapathElementPreviewView.swift */,
+				E54F8B8329DF6DC900022498 /* AdderView.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -360,8 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54F8B6C29DBAF5000022498 /* DatapathComponent.swift in Sources */,
 				E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */,
+				E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */,
+				E54F8B8029DF60E900022498 /* Adder.swift in Sources */,
+				E54F8B8229DF6D3200022498 /* DatapathElementPreviewView.swift in Sources */,
 				E574627129CB69E7005A3434 /* Processor.swift in Sources */,
 				E54F8B6E29DDFD7300022498 /* MuxView.swift in Sources */,
 				E54F8B6A29DB3D5B00022498 /* CreditsView.swift in Sources */,
@@ -370,13 +372,11 @@
 				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
 				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,
 				E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */,
-				E54F8B7A29DE58F100022498 /* DatapathElementView.swift in Sources */,
 				E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */,
 				E574627429CB6AA6005A3434 /* Instruction.swift in Sources */,
 				E538518A29CB65C200CF59DA /* ALUView.swift in Sources */,
 				E54F8B6429DB38EB00022498 /* WorkbenchView.swift in Sources */,
 				E531825729C93438004A9793 /* DataSimApp.swift in Sources */,
-				E538518829CB5C2000CF59DA /* AdderLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +463,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -515,6 +517,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -544,7 +548,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -583,7 +587,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;

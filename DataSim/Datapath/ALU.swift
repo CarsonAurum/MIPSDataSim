@@ -8,16 +8,22 @@
 import Foundation
 
 class ALU: DatapathElement, ObservableObject {
-    
-    init() {
-        super.init(.alu)
+    static func == (lhs: ALU, rhs: ALU) -> Bool {
+        lhs.id == rhs.id
     }
     
-    @Published var inputA: DatapathComponent? = nil
-    @Published var inputB: DatapathComponent? = nil
-    @Published var outputA: DatapathComponent? = nil
-    @Published var outputB: DatapathComponent? = nil
-    @Published var selectedConnection: ALUConnection? = nil
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    let id: UUID = .init()
+    let componentType: DatapathComponent = .alu
+    
+    @Published var inputA: (UUID?, DatapathComponent?) = (nil, nil)
+    @Published var inputB: (UUID?, DatapathComponent?) = (nil, nil)
+    @Published var outputA: (UUID?, DatapathComponent?) = (nil, nil)
+    @Published var outputB: (UUID?, DatapathComponent?) = (nil, nil)
+    @Published var selectedConnection: ALUConnection? = (nil)
 }
 
 extension ALU {

@@ -7,20 +7,18 @@
 
 import Foundation
 
-class DatapathElement: Hashable, Equatable, Identifiable {
-    static func == (lhs: DatapathElement, rhs: DatapathElement) -> Bool {
-        lhs.componentType == rhs.componentType
-    }
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-        hasher.combine(componentType.rawValue)
-    }
+public enum DatapathComponent: String, CaseIterable, Equatable, Hashable {
+    case adder      = "Adder",
+         alu        = "ALU",
+         mux        = "Mux",
+         signExt    = "Sign Ext"
+    // Logic Units
     
-    var id: UUID  = .init()
-    var componentType: DatapathComponent
-    init(_ componentType: DatapathComponent) {
-        self.componentType = componentType
-    }
+}
+
+protocol DatapathElement: Hashable, Equatable, Identifiable {
+    var id: UUID { get }
+    var componentType: DatapathComponent { get }
 }
 
 extension DatapathElement {
