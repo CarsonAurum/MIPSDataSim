@@ -22,6 +22,8 @@ struct DatapathElementPreviewView: View {
             MuxLineView()
         case .signExt:
             SignExtenderLineView()
+        case .pc:
+            EmptyView()
         }
     }
 }

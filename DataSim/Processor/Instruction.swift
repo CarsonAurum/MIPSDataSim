@@ -13,8 +13,29 @@ struct Instruction {
     let name: String
     let exampleUsage: String
     // Datapath Components
+    var alu: ALU {
+        var ret = ALU()
+        
+        ret.outputA = (nil, .mux)
+        ret.inputA = (nil, .pc)
+        
+        return ret
+    }
+    
+    /*
+    var mux: Mux {
+        ret.inputB = (nil, .alu)
+    }
+    
+    var adder1: Adder {
+        
+    }
+    
+    var adder2: Adder {
+        
+    }
+     */
 }
-
 
 extension Instruction {
     enum MIPSType {
