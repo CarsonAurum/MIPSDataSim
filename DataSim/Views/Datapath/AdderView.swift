@@ -10,23 +10,16 @@ import SwiftUI
 /// An ALU shape with two output wires. This shape can be altered between a view with untappable lines, or a
 /// view with a tappable circles.
 struct AdderView: View {
-    private let hasLines: Bool
-    private let color: Color
-    private let secondaryColor: Color
-    init(showLines: Bool = true,
-         color: Color = .black,
-         secondaryColor: Color = .gray
-    ) {
-        self.hasLines = showLines
-        self.color = color
-        self.secondaryColor = secondaryColor
+    @Binding private var obj: Adder
+    @Binding var curSelection: (UUID, DatapathComponent, DatapathComponent.Connection)?
+    
+    init(obj: Binding<Adder>,
+         curSelection: Binding<(UUID, DatapathComponent, DatapathComponent.Connection)?>) {
+        self._obj = obj
+        self._curSelection = curSelection
     }
     var body: some View {
-        if hasLines {
-            AdderLineView()
-        } else {
-            AdderCircleView(color: color, secondaryColor: secondaryColor)
-        }
+        AdderLineView()
     }
 }
 
@@ -124,10 +117,10 @@ struct AdderLineView: View {
     }
 }
 
-struct AdderView_Previews: PreviewProvider {
-    static var previews: some View {
-        AdderView(showLines: true)
-            .frame(width: 200, height: 200)
-            .border(.blue, width: 1)
-    }
-}
+//struct AdderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AdderView(showLines: true)
+//            .frame(width: 200, height: 200)
+//            .border(.blue, width: 1)
+//    }
+//}

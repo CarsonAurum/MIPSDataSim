@@ -18,9 +18,7 @@ struct WorkbenchView: View {
     @State private var isPaused: Bool = false
     @State private var selectedElement: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
     
-    // TODO: - Scaling
-    @State private var scale: Double = 1.0
-    @State private var lastScale: Double = 1.0
+    // TODO: - Scaling & Panning
     
     var selectionPane: some View {
         HStack {
@@ -71,7 +69,9 @@ struct WorkbenchView: View {
                 ScrollView([.horizontal, .vertical],
                            showsIndicators: false) {
                     ForEach($proc.alus, id: \.self) { $alu in
-                        ALUView(obj: $alu, curSelection: $selectedElement)
+                        ALUView(obj: $alu,
+                                curSelection: $selectedElement)
+                            .aspectRatio(contentMode: .fit)
                             .frame(width: 75, height: 75)
                             .position(x: CGFloat((50...500).randomElement()!),
                                       y: CGFloat((50...500).randomElement()!))
@@ -83,11 +83,6 @@ struct WorkbenchView: View {
                     //                                          y: CGFloat((50...500).randomElement()!))
                     //                        }
                 }
-                           .gesture(MagnificationGesture()
-                                       .onChanged({ (scale) in
-                                           self.scale = scale
-                                       }))
-                                           .scaleEffect(self.scale)
                            .onTapGesture {
                                if selectedElement != nil {
                                    switch selectedElement!.1 {

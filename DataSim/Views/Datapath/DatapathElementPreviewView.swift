@@ -15,7 +15,7 @@ struct DatapathElementPreviewView: View {
     var body: some View {
         switch component {
         case .adder:
-            AdderView()
+            AdderLineView()
         case .alu:
             ALULineView()
         case .mux:
