@@ -9,9 +9,8 @@ import SwiftUI
 
 @main
 struct DataSimApp: App {
-    @State var color: Color = .gray
-    @StateObject var processor: MIPSProcessor = .init()
-
+    @State var processor: MIPSProcessor = .init()
+    
     var body: some Scene {
         WindowGroup {
             MainView()

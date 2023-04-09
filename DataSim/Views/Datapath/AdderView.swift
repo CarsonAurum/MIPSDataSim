@@ -23,7 +23,7 @@ struct AdderView: View {
     }
     var body: some View {
         if hasLines {
-            AdderLineView(color: color)
+            AdderLineView()
         } else {
             AdderCircleView(color: color, secondaryColor: secondaryColor)
         }
@@ -85,16 +85,11 @@ struct AdderCircleView: View {
 /// - Note: Should be square
 struct AdderLineView: View {
     
-    private let color: Color
-    
-    init(color: Color = .black) {
-        self.color = color
-    }
     var body: some View {
         GeometryReader { proxy in
             ZStack {
                 ALUShape()
-                    .fill(self.color)
+                    .fill(.foreground)
                     .allowsHitTesting(true)
                     .frame(width: proxy.size.width / 2,
                            height: proxy.size.height)
@@ -102,7 +97,7 @@ struct AdderLineView: View {
                               y: proxy.size.height / 2)
                 // Top left
                 Rectangle()
-                    .fill(self.color)
+                    .fill(.foreground)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -110,7 +105,7 @@ struct AdderLineView: View {
                               y: proxy.size.height / 5)
                 // Bottom left
                 Rectangle()
-                    .fill(self.color)
+                    .fill(.foreground)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -118,7 +113,7 @@ struct AdderLineView: View {
                               y: proxy.size.height - proxy.size.height / 5)
                 // Top right
                 Rectangle()
-                    .fill(self.color)
+                    .fill(.foreground)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)

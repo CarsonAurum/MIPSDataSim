@@ -17,9 +17,20 @@ public enum DatapathComponent: String, CaseIterable, Equatable, Hashable {
     
 }
 
+extension DatapathComponent {
+    public enum Connection {
+        case inA, inB, inC, inD
+        case outA, outB, outC, outD
+    }
+}
+
 protocol DatapathElement: Hashable, Equatable, Identifiable {
     var id: UUID { get }
     var componentType: DatapathComponent { get }
+    var selectedConnection: DatapathComponent.Connection? { get }
+    
+    func getSelection() -> (UUID, DatapathComponent, DatapathComponent.Connection)?
+    func setSelection(_ sel: (UUID, DatapathComponent, DatapathComponent.Connection)?)
 }
 
 extension DatapathElement {

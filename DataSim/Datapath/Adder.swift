@@ -7,7 +7,17 @@
 
 import Foundation
 
-class Adder: DatapathElement, ObservableObject {
+class Adder: ObservableObject {
+    func getSelection() -> (UUID, DatapathComponent, DatapathComponent.Connection)? {
+        guard let selectedConnection = selectedConnection else { return nil }
+        switch selectedConnection {
+        case .inA:  return inputA
+        case .inB:  return inputB
+        case .outA: return outputA
+        default:    return nil
+        }
+    }
+    
     
     static func == (lhs: Adder, rhs: Adder) -> Bool {
         lhs.id == rhs.id
@@ -21,14 +31,8 @@ class Adder: DatapathElement, ObservableObject {
     
     let componentType: DatapathComponent = .adder
     
-    @Published var inputA: DatapathComponent? = nil
-    @Published var inputB: DatapathComponent? = nil
-    @Published var outputA: DatapathComponent? = nil
-    @Published var selectedConnection: AdderConnection? = nil
-}
-
-extension Adder {
-    enum AdderConnection {
-        case inA, inB, outA
-    }
+    @Published var inputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
+    @Published var inputB: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
+    @Published var outputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
+    @Published var selectedConnection: DatapathComponent.Connection? = nil
 }

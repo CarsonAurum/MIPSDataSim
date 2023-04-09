@@ -14,10 +14,10 @@ struct Instruction {
     let exampleUsage: String
     // Datapath Components
     var alu: ALU {
-        var ret = ALU()
+        let ret = ALU()
         
-        ret.outputA = (nil, .mux)
-        ret.inputA = (nil, .pc)
+        //ret.outputA = (nil, .mux, .inA)
+        //ret.inputA = (nil, .pc, .outA)
         
         return ret
     }

@@ -46,33 +46,42 @@ struct SignExtenderCircleView: View {
 }
 
 struct SignExtenderLineView: View {
+    
+    var angledLine: some View {
+        Rectangle()
+            .rotation(.degrees(45))
+            .fill(.foreground)
+            .allowsHitTesting(false)
+    }
+    
+    var straightLine: some View {
+        Rectangle()
+            .fill(.foreground)
+            .allowsHitTesting(false)
+    }
+    
     var body: some View {
         GeometryReader { geo in
             Ellipse()
+                .fill(.foreground)
                 .allowsHitTesting(true)
                 .frame(width: geo.size.width / 5 * 3, height: geo.size.height)
                 .position(x: geo.size.width / 2, y: geo.size.height / 2)
             // Left line
-            Rectangle()
-                .allowsHitTesting(false)
+            straightLine
                 .frame(width: geo.size.width / 4, height: geo.size.height / 40)
                 .position(x: geo.size.width - (geo.size.width / 8),
                           y: geo.size.height / 2)
             // Right line
-            Rectangle()
-                .allowsHitTesting(false)
+            straightLine
                 .frame(width: geo.size.width / 4, height: geo.size.height / 40)
                 .position(x: geo.size.width / 8, y: geo.size.height / 2)
             // Right diagonal line
-            Rectangle()
-                .rotation(.degrees(45))
-                .allowsHitTesting(false)
+            angledLine
                 .frame(width: geo.size.width / 6, height: geo.size.height / 40)
                 .position(x: geo.size.width / 8, y: geo.size.height / 2)
             // Left diagonal line
-            Rectangle()
-                .rotation(.degrees(45))
-                .allowsHitTesting(false)
+            angledLine
                 .frame(width: geo.size.width / 6, height: geo.size.height / 40)
                 .position(x: geo.size.width - (geo.size.width / 8),
                           y: geo.size.height / 2)
