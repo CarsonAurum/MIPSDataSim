@@ -8,13 +8,91 @@
 import SwiftUI
 
 struct OptionsView: View {
+    @EnvironmentObject private var settings: AppSettings
+    @EnvironmentObject private var gameManager: GameManager
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct OptionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        OptionsView()
+        VStack {
+            HStack {
+                Spacer()
+                Text("App Settings")
+                    .font(.customLargeTitle)
+                Spacer()
+            }
+            .animation(.default)
+            if gameManager.isPaused {
+                Text("If you want to make changes to the timer settings, you must first quit your current game!")
+                    .multilineTextAlignment(.center)
+                    .font(.customBody)
+                    .padding([.top, .bottom], 30)
+            } else {
+                HStack {
+                    Spacer()
+                    Toggle("Use Timer", isOn: $settings.enableTimer)
+                        .onChange(of: settings.enableTimer) { newValue in
+                            if (newValue == false && settings.enableHardMode) {
+                                settings.enableHardMode = false
+                            }
+                        }
+                        .fixedSize()
+                    Spacer()
+                }
+                .animation(.default)
+                if settings.enableTimer {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Picker(selection: $settings.difficulty) {
+                                Text(AppSettings.Difficulty.turtle.rawValue).tag(AppSettings.Difficulty.turtle)
+                                    .font(.customCaption)
+                                Text(AppSettings.Difficulty.easy.rawValue).tag(AppSettings.Difficulty.easy)
+                                Text(AppSettings.Difficulty.medium.rawValue).tag(AppSettings.Difficulty.medium)
+                                Text(AppSettings.Difficulty.hard.rawValue).tag(AppSettings.Difficulty.hard)
+                                Text(AppSettings.Difficulty.lightning.rawValue).tag(AppSettings.Difficulty.lightning)
+                            } label: {
+                                Text("Timer Difficult Selection")
+                                    .font(.customBody)
+                            }
+                            .onChange(of: settings.difficulty) { newValue in
+                                gameManager.timeRemaining = settings.getTimeRemaining()
+                            }
+                            .pickerStyle(.inline)
+                            Spacer()
+                        }
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Toggle(isOn: $settings.enableHardMode) {
+                                    Text("Hard Mode")
+                                        .font(.customBody)
+                                }
+                                    .onChange(of: settings.enableHardMode) { newValue in
+                                        if (!settings.enableTimer) {
+                                            settings.enableHardMode = false
+                                        }
+                                    }
+                                    .fixedSize()
+                                Spacer()
+                            }
+                            Text("Hardmode reduces time remaining on each incorrect connection.")
+                                .font(.customSubtitle)
+                                .foregroundColor(.gray)
+                        }
+                        
+                    }
+                    .transition(.slide)
+                    .animation(.default)
+                }
+            }
+            HStack {
+                Spacer()
+                ColorPicker(selection: $settings.primaryColor) {
+                    Text("Datapath Element Color")
+                        .font(.customBody)
+                }
+                    .fixedSize()
+                Spacer()
+            }
+            .animation(.default)
+        }
     }
 }

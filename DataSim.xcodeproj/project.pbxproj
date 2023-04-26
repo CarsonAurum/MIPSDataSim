@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51B591929F9750E00C981A8 /* Bubblegum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E51B591829F9750E00C981A8 /* Bubblegum.ttf */; };
+		E51B591D29F977B000C981A8 /* Font++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51B591C29F977B000C981A8 /* Font++.swift */; };
+		E51B591F29F9817200C981A8 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51B591E29F9817200C981A8 /* GameManager.swift */; };
 		E531825729C93438004A9793 /* DataSimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531825629C93438004A9793 /* DataSimApp.swift */; };
 		E531825929C93438004A9793 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531825829C93438004A9793 /* MainView.swift */; };
 		E531825B29C93439004A9793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531825A29C93439004A9793 /* Assets.xcassets */; };
@@ -31,6 +34,8 @@
 		E569838F29E251B100F140A5 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569838E29E251B100F140A5 /* ShakeEffect.swift */; };
 		E569839129E2536B00F140A5 /* MIPSProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569839029E2536B00F140A5 /* MIPSProcessor.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
+		E5FC120D29F862CD006804C6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* AppSettings.swift */; };
+		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E51B591829F9750E00C981A8 /* Bubblegum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubblegum.ttf; sourceTree = "<group>"; };
+		E51B591A29F975D700C981A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E51B591C29F977B000C981A8 /* Font++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font++.swift"; sourceTree = "<group>"; };
+		E51B591E29F9817200C981A8 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		E531825329C93438004A9793 /* DataSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E531825629C93438004A9793 /* DataSimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimApp.swift; sourceTree = "<group>"; };
 		E531825829C93438004A9793 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -78,6 +87,8 @@
 		E569838E29E251B100F140A5 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
 		E569839029E2536B00F140A5 /* MIPSProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIPSProcessor.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
+		E5FC120C29F862CD006804C6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		E5FC120E29F868A5006804C6 /* PCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E51B591B29F9778A00C981A8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E51B591829F9750E00C981A8 /* Bubblegum.ttf */,
+				E51B591C29F977B000C981A8 /* Font++.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E531824A29C93438004A9793 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +149,8 @@
 		E531825529C93438004A9793 /* DataSim */ = {
 			isa = PBXGroup;
 			children = (
+				E51B591B29F9778A00C981A8 /* Fonts */,
+				E51B591A29F975D700C981A8 /* Info.plist */,
 				E531828229C934F8004A9793 /* App */,
 				E54F8B7229DE090400022498 /* Datapath */,
 				E574627229CB6A80005A3434 /* Processor */,
@@ -169,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				E569838D29E251A400F140A5 /* Effects */,
-				E569838C29E2519A00F140A5 /* Modifiers */,
 				E531828729C94165004A9793 /* Shapes */,
 				E574626F29CB6929005A3434 /* Datapath */,
 				E531825829C93438004A9793 /* MainView.swift */,
@@ -185,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				E531825629C93438004A9793 /* DataSimApp.swift */,
+				E5FC120C29F862CD006804C6 /* AppSettings.swift */,
+				E51B591E29F9817200C981A8 /* GameManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -207,13 +230,6 @@
 			path = Datapath;
 			sourceTree = "<group>";
 		};
-		E569838C29E2519A00F140A5 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
 		E569838D29E251A400F140A5 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +246,7 @@
 				E54F8B6F29DE037200022498 /* SignExtenderView.swift */,
 				E54F8B8129DF6D3200022498 /* DatapathElementPreviewView.swift */,
 				E54F8B8329DF6DC900022498 /* AdderView.swift */,
+				E5FC120E29F868A5006804C6 /* PCView.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -355,6 +372,7 @@
 			files = (
 				E531825F29C93439004A9793 /* Preview Assets.xcassets in Resources */,
 				E531825B29C93439004A9793 /* Assets.xcassets in Resources */,
+				E51B591929F9750E00C981A8 /* Bubblegum.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */,
+				E5FC120D29F862CD006804C6 /* AppSettings.swift in Sources */,
 				E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */,
+				E51B591F29F9817200C981A8 /* GameManager.swift in Sources */,
 				E54F8B8029DF60E900022498 /* Adder.swift in Sources */,
 				E54F8B8229DF6D3200022498 /* DatapathElementPreviewView.swift in Sources */,
 				E54F8B6E29DDFD7300022498 /* MuxView.swift in Sources */,
@@ -389,8 +409,10 @@
 				E531825929C93438004A9793 /* MainView.swift in Sources */,
 				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
 				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,
+				E51B591D29F977B000C981A8 /* Font++.swift in Sources */,
 				E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */,
 				E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */,
+				E5FC120F29F868A5006804C6 /* PCView.swift in Sources */,
 				E569838F29E251B100F140A5 /* ShakeEffect.swift in Sources */,
 				E574627429CB6AA6005A3434 /* Instruction.swift in Sources */,
 				E538518A29CB65C200CF59DA /* ALUView.swift in Sources */,
@@ -558,6 +580,7 @@
 				DEVELOPMENT_TEAM = ZTSVWKU48B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DataSim/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -575,7 +598,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -597,6 +620,7 @@
 				DEVELOPMENT_TEAM = ZTSVWKU48B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DataSim/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -614,7 +638,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

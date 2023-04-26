@@ -9,12 +9,17 @@ import SwiftUI
 
 @main
 struct DataSimApp: App {
-    @State var processor: MIPSProcessor = .init()
+    /// The single source of truth for the processor modelled by the active datapath.
+    @StateObject private var processor: MIPSProcessor = .init()
+    @StateObject private var appSettings: AppSettings = .init()
+    @StateObject private var gameManager: GameManager = .init()
     
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(processor)
+                .environmentObject(appSettings)
+                .environmentObject(gameManager)
         }
     }
 }

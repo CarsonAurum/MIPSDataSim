@@ -11,32 +11,46 @@ struct MainView: View {
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
-                Spacer()
-                Text("MIPS DataSim")
-                    .font(.largeTitle)
+                Group {
+                    Spacer()
+                    Text("MIPS DataSim")
+                        .font(.customLargeTitle)
+                }
+                Group {
+                    Spacer()
+                        .frame(height: 40)
+                    NavigationLink(
+                        destination: WorkbenchView()
+                            .navigationBarBackButtonHidden(true)
+                    ) {
+                        Text("New Game")
+                            .foregroundColor(.primary)
+                            .font(.customHeadline)
+                            .frame(height: 20)
+                    }
+                }
                 Spacer()
                     .frame(height: 20)
-                NavigationLink(
-                    destination: WorkbenchView()
-                        .navigationBarBackButtonHidden(true)
-                ) {
-                    Text("New Game")
-                        .font(.headline)
-                        .frame(height: 20)
-                }
                 NavigationLink(destination: HelpView()) {
                     Text("Datapath Hints")
-                        .font(.subheadline)
+                        .foregroundColor(.primary)
+                        .font(.customHeadline)
                         .frame(height: 20)
                 }
+                Spacer()
+                    .frame(height: 20)
                 NavigationLink(destination: OptionsView()) {
                     Text("Game Settings")
-                        .font(.subheadline)
+                        .foregroundColor(.primary)
+                        .font(.customHeadline)
                         .frame(height: 20)
                 }
+                Spacer()
+                    .frame(height: 20)
                 NavigationLink(destination: CreditsView()) {
                     Text("Game Credits")
-                        .font(.subheadline)
+                        .foregroundColor(.primary)
+                        .font(.customHeadline)
                         .frame(height: 20)
                 }
                 Spacer()

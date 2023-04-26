@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/// A model representing an Arithmetic Logic Unit
 class ALU: DatapathElement, ObservableObject {
     func getSelection() -> (UUID, DatapathComponent, DatapathComponent.Connection)? {
         guard let selectedConnection = selectedConnection else { return nil }

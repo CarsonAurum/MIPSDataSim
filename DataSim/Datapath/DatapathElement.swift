@@ -7,14 +7,23 @@
 
 import Foundation
 
+/// An enumeration containing all datapath component types supported by this application.
 public enum DatapathComponent: String, CaseIterable, Equatable, Hashable {
     case adder      = "Adder",
          alu        = "ALU",
          mux        = "Mux",
-         signExt    = "Sign Ext",
-         pc         = "PC"
-    // Logic Units
-    
+         signExt    = "Sign Ext"
+    //     pc         = "PC"
+    // TODO:     regfile    = "Reg File
+    // TODO:     instMem    = "IM"
+    // TODO:     dataMem    = "DM"
+    // TODO:     shifter    = "Shifter"
+
+    // TODO:     AND        = "AND"
+    // TODO:     NAND       = "NAND"
+    // TODO:     OR         = "OR"
+    // TODO:     NOR        = "NOR"
+    // TODO:     NOT        = "NOT"
 }
 
 extension DatapathComponent {
@@ -45,8 +54,6 @@ extension DatapathElement {
             return "Multiplexor"
         case .signExt:
             return "Sign Extension Unit"
-        case .pc:
-            return "Program Counter"
         }
     }
 }
