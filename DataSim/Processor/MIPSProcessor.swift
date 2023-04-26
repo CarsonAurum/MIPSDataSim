@@ -18,4 +18,9 @@ class MIPSProcessor: ObservableObject {
         
         var destID: UUID
     }
+    
+    func reset() {
+        alus.removeAll()
+        adders.removeAll()
+    }
 }

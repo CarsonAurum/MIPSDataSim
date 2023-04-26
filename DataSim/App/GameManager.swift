@@ -11,4 +11,9 @@ import Combine
 class GameManager: ObservableObject {
     @Published public var isPaused: Bool = false
     @Published public var timeRemaining: TimeInterval = 15 * 60
+    
+    func reset(_ ti: TimeInterval) {
+        isPaused = false
+        self.timeRemaining = ti
+    }
 }

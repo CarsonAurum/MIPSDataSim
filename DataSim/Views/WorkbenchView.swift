@@ -13,16 +13,23 @@ struct WorkbenchView: View {
     @Environment(\.dismiss) private var dismissal
     /// The vertical size class (determining iPad from iPhone) for certain space-sensitive geometries.
     @Environment(\.verticalSizeClass) private var vClass
+    
     /// The environment-wide processor.
     @EnvironmentObject var proc: MIPSProcessor
     @EnvironmentObject var manager: GameManager
+    @EnvironmentObject var settings: AppSettings
+    
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    
     /// Which element is currently selected within the workbench.
     ///
     /// - Note: Due to the way the @State wrapper works with tuples, the updates will only occur when
     /// changing this tuple as a whole from nil to a value or vice versa. Updating individual components will
     /// not cause changes in the UI.
     @State private var selectedElement: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
+    @State private var selectedQuit: Bool = false
     
     
     // TODO: - Scaling & Panning
@@ -30,17 +37,49 @@ struct WorkbenchView: View {
     var topBar: some View {
         GeometryReader { geo in
             HStack {
-                Button {
-                    manager.isPaused.toggle()
-                    dismissal()
-                } label: {
-                    Image(systemName: "pause.fill")
-                        .foregroundColor(.primary)
+                Group {
+                    Button {
+                        dismissal()
+                        manager.isPaused.toggle()
+                    } label: {
+                        Image(systemName: "pause.fill")
+                            .foregroundColor(.primary)
+                            .imageScale(.large)
+                    }
+                    .position(
+                        x: 2 * geo.size.height / 30,
+                        y: geo.size.width / 30
+                    )
+                    Button {
+                        selectedQuit = true
+                    } label: {
+                        Image(systemName: "stop.fill")
+                            .foregroundColor(.primary)
+                            .imageScale(.large)
+                    }
+                    .position(
+                        x: geo.size.height / 30,
+                        y: geo.size.width / 30
+                    )
+                    .fullScreenCover(isPresented: $selectedQuit) {
+                        QuitPopup(onQuit: {
+                            quitGame()
+                        }, onCancel: {
+                            selectedQuit = false
+                        })
+                    }
+                    Button {
+                        // TODO: Undo capabilities
+                    } label: {
+                        Image(systemName: "arrow.uturn.backward")
+                            .foregroundColor(.primary)
+                            .imageScale(.large)
+                    }
+                    .position(
+                        x: geo.size.height / 30,
+                        y: geo.size.width / 30
+                    )
                 }
-                .position(
-                    x: geo.size.height / 30,
-                    y: geo.size.width / 30
-                )
                 Spacer()
                 Text("Time Remaining: \(formattedTime(manager.timeRemaining))")
                     .font(.customSubtitle)
@@ -148,13 +187,56 @@ struct WorkbenchView: View {
         let seconds = Int(time) % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
+    func quitGame() {
+        dismissal()
+        manager.reset(settings.getTimeRemaining())
+        proc.reset()
+    }
 }
 
-struct Workbench_Previews: PreviewProvider {
-    @State static var testProc: MIPSProcessor = .init()
-    static var previews: some View {
-        WorkbenchView()
-            .environmentObject(testProc)
-            .previewInterfaceOrientation(.landscapeLeft)
+struct QuitPopup: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    let onQuit: () -> Void
+    let onCancel: () -> Void
+    
+    var body: some View {
+        ZStack {
+            VStack {
+                Text("Do you wish to quit?")
+                    .foregroundColor(.primary)
+                    .font(.customBody)
+                    .padding()
+                
+                Text("You will return to the main menu.")
+                    .foregroundColor(.primary)
+                    .font(.customSubtitle)
+                    .padding()
+                
+                HStack {
+                    Button(action: onQuit) {
+                        Text("Quit")
+                            .font(.customCaption)
+                            .padding()
+                            .foregroundColor(.primary)
+                            .background(Color.red)
+                            .cornerRadius(10)
+                    }
+                    
+                    Button(action: onCancel) {
+                        Text("Cancel")
+                            .font(.customCaption)
+                            .padding()
+                            .foregroundColor(.primary)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                }
+            }
+            .frame(width: 300, height: 200)
+            .background(colorScheme == .light ? Color.white : Color.black)
+            .cornerRadius(20)
+        }
     }
 }

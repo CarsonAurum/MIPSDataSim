@@ -27,7 +27,10 @@ struct OptionsView: View {
             } else {
                 HStack {
                     Spacer()
-                    Toggle("Use Timer", isOn: $settings.enableTimer)
+                    Toggle(isOn: $settings.enableTimer) {
+                        Text("Use Timer")
+                            .font(.customBody)
+                    }
                         .onChange(of: settings.enableTimer) { newValue in
                             if (newValue == false && settings.enableHardMode) {
                                 settings.enableHardMode = false
@@ -45,9 +48,13 @@ struct OptionsView: View {
                                 Text(AppSettings.Difficulty.turtle.rawValue).tag(AppSettings.Difficulty.turtle)
                                     .font(.customCaption)
                                 Text(AppSettings.Difficulty.easy.rawValue).tag(AppSettings.Difficulty.easy)
+                                    .font(.customCaption)
                                 Text(AppSettings.Difficulty.medium.rawValue).tag(AppSettings.Difficulty.medium)
+                                    .font(.customCaption)
                                 Text(AppSettings.Difficulty.hard.rawValue).tag(AppSettings.Difficulty.hard)
+                                    .font(.customCaption)
                                 Text(AppSettings.Difficulty.lightning.rawValue).tag(AppSettings.Difficulty.lightning)
+                                    .font(.customCaption)
                             } label: {
                                 Text("Timer Difficult Selection")
                                     .font(.customBody)

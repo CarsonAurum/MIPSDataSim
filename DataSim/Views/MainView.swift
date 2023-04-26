@@ -14,6 +14,7 @@ struct MainView: View {
                 Group {
                     Spacer()
                     Text("MIPS DataSim")
+                        .foregroundColor(.primary)
                         .font(.customLargeTitle)
                 }
                 Group {
