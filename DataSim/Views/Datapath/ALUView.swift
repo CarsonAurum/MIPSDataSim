@@ -11,6 +11,10 @@ import NovaCore
 /// An ALU shape with two output wires. This shape can be altered between a view with untappable lines, or a
 /// view with a tappable circles.
 struct ALUView: View {
+    
+    @EnvironmentObject var settings: GameSettings
+    @EnvironmentObject var manager: GameManager
+    
     //TODO: Use the offset to denote a long-press before removing this ALU from the workbench.
     @State private var scale: CGFloat = 0.0
     /// The shaking variable to control the rejection animation for improper actions.
@@ -49,11 +53,17 @@ struct ALUView: View {
                         // Ensure an output has previously been selected for this input.
                         guard let curSelection = curSelection else {
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         // Ensure this input is open for a connection.
                         guard obj.inputA.isNone else {
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         // Determine what output was currently selected.
@@ -81,10 +91,16 @@ struct ALUView: View {
                     .onTapGesture {
                         guard let curSelection = curSelection else {
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         guard obj.inputB.isNone else {
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         switch curSelection.1 {
@@ -117,11 +133,17 @@ struct ALUView: View {
                                 return
                             }
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         // Ensure this connection is available.
                         guard obj.outputA.isNone else {
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         // Select outputA on the object level for injection with setSelected()
@@ -148,10 +170,15 @@ struct ALUView: View {
                                 return
                             }
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5                            }
                             return
                         }
                         guard obj.outputB.isNone else {
                             shaking.toggle()
+                            if (settings.enableHardMode) {
+                                manager.timeRemaining -= 5
+                            }
                             return
                         }
                         obj.selectedConnection = .outB
@@ -167,7 +194,7 @@ struct ALUView: View {
             // Visual wires within the bounds of this view
             // Top left
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 // Only show lines if: (1) this line is part of a completed path || (2) this is the current selection
                 .opacity((obj.inputA != nil || obj.selectedConnection == .inA) ? 100 : 0)
                 .allowsHitTesting(false)
@@ -177,7 +204,7 @@ struct ALUView: View {
                           y: geo.size.height / 5)
             // Bottom left
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .opacity((obj.inputB != nil || obj.selectedConnection == .inB) ? 100 : 0)
                 .allowsHitTesting(false)
                 .frame(width: geo.size.width / 4,
@@ -186,7 +213,7 @@ struct ALUView: View {
                           y: geo.size.height - geo.size.height / 5)
             // Top right
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .opacity((obj.outputA != nil || obj.selectedConnection == .outA) ? 100 : 0)
                 .allowsHitTesting(false)
                 .frame(width: geo.size.width / 4,
@@ -195,7 +222,7 @@ struct ALUView: View {
                           y: (geo.size.height / 8) * 3)
             // Bottom right
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .opacity((obj.outputB != nil || obj.selectedConnection == .outB) ? 100 : 0)
                 .allowsHitTesting(false)
                 .frame(width: geo.size.width / 4,
@@ -210,7 +237,7 @@ struct ALUView: View {
             ZStack {
                 hitCircles
                 ALUShape()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: geo.size.width / 2,
                            height: geo.size.height)
@@ -227,11 +254,13 @@ struct ALUView: View {
 /// A preview of this datapath component containing static wires.
 /// - Note: Should be square
 struct ALULineView: View {
+    @EnvironmentObject var settings: GameSettings
+    
     var body: some View {
         GeometryReader { proxy in
             ZStack {
                 ALUShape()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(true)
                     .frame(width: proxy.size.width / 2,
                            height: proxy.size.height)
@@ -239,7 +268,7 @@ struct ALULineView: View {
                               y: proxy.size.height / 2)
                 // Top left
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -247,7 +276,7 @@ struct ALULineView: View {
                               y: proxy.size.height / 5)
                 // Bottom left
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -255,7 +284,7 @@ struct ALULineView: View {
                               y: proxy.size.height - proxy.size.height / 5)
                 // Top right
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -263,7 +292,7 @@ struct ALULineView: View {
                               y: (proxy.size.height / 8) * 3)
                 // Bottom right
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)

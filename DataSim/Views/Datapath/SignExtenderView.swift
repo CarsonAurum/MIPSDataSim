@@ -46,24 +46,25 @@ struct SignExtenderCircleView: View {
 }
 
 struct SignExtenderLineView: View {
+    @EnvironmentObject var settings: GameSettings
     
     var angledLine: some View {
         Rectangle()
             .rotation(.degrees(45))
-            .fill(.foreground)
+            .fill(settings.primaryColor)
             .allowsHitTesting(false)
     }
     
     var straightLine: some View {
         Rectangle()
-            .fill(.foreground)
+            .fill(settings.primaryColor)
             .allowsHitTesting(false)
     }
     
     var body: some View {
         GeometryReader { geo in
             Ellipse()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .allowsHitTesting(true)
                 .frame(width: geo.size.width / 5 * 3, height: geo.size.height)
                 .position(x: geo.size.width / 2, y: geo.size.height / 2)

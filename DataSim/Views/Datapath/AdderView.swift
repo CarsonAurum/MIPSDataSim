@@ -77,12 +77,13 @@ struct AdderCircleView: View {
 
 /// - Note: Should be square
 struct AdderLineView: View {
+    @EnvironmentObject var settings: GameSettings
     
     var body: some View {
         GeometryReader { proxy in
             ZStack {
                 ALUShape()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(true)
                     .frame(width: proxy.size.width / 2,
                            height: proxy.size.height)
@@ -90,7 +91,7 @@ struct AdderLineView: View {
                               y: proxy.size.height / 2)
                 // Top left
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -98,7 +99,7 @@ struct AdderLineView: View {
                               y: proxy.size.height / 5)
                 // Bottom left
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)
@@ -106,7 +107,7 @@ struct AdderLineView: View {
                               y: proxy.size.height - proxy.size.height / 5)
                 // Top right
                 Rectangle()
-                    .fill(.foreground)
+                    .fill(settings.primaryColor)
                     .allowsHitTesting(false)
                     .frame(width: proxy.size.width / 4,
                            height: proxy.size.height / 40)

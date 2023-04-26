@@ -34,7 +34,7 @@
 		E569838F29E251B100F140A5 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569838E29E251B100F140A5 /* ShakeEffect.swift */; };
 		E569839129E2536B00F140A5 /* MIPSProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569839029E2536B00F140A5 /* MIPSProcessor.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
-		E5FC120D29F862CD006804C6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* AppSettings.swift */; };
+		E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* GameSettings.swift */; };
 		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +87,7 @@
 		E569838E29E251B100F140A5 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
 		E569839029E2536B00F140A5 /* MIPSProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIPSProcessor.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
-		E5FC120C29F862CD006804C6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		E5FC120E29F868A5006804C6 /* PCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				E531825629C93438004A9793 /* DataSimApp.swift */,
-				E5FC120C29F862CD006804C6 /* AppSettings.swift */,
+				E5FC120C29F862CD006804C6 /* GameSettings.swift */,
 				E51B591E29F9817200C981A8 /* GameManager.swift */,
 			);
 			path = App;
@@ -406,7 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */,
-				E5FC120D29F862CD006804C6 /* AppSettings.swift in Sources */,
+				E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */,
 				E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */,
 				E51B591F29F9817200C981A8 /* GameManager.swift in Sources */,
 				E54F8B8029DF60E900022498 /* Adder.swift in Sources */,

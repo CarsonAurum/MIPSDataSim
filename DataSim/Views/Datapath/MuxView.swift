@@ -68,29 +68,31 @@ struct MuxCircleView: View {
 }
 
 struct MuxLineView: View {
+    @EnvironmentObject var settings: GameSettings
+    
     var body: some View {
         GeometryReader { geo in
             Capsule(style: .continuous)
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .allowsHitTesting(true)
                 .frame(width: geo.size.width / 4)
                 .position(x: geo.size.width / 2, y: geo.size.height / 2)
             // Top left
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .allowsHitTesting(false)
                 .frame(width: geo.size.width / 2, height: geo.size.height / 40)
                 .position(x: geo.size.width / 4, y: geo.size.height / 4)
             // Bottom Left
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .allowsHitTesting(false)
                 .frame(width: geo.size.width / 2,
                        height: geo.size.height / 40)
                 .position(x: geo.size.width / 4,
                           y: geo.size.width - (geo.size.width / 4))
             Rectangle()
-                .fill(.foreground)
+                .fill(settings.primaryColor)
                 .allowsHitTesting(false)
                 .frame(width: geo.size.width / 2, height: geo.size.height / 40)
                 .position(x: geo.size.width / 4 * 3, y: geo.size.height / 2)

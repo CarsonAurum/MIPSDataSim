@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OptionsView: View {
-    @EnvironmentObject private var settings: AppSettings
+    @EnvironmentObject private var settings: GameSettings
     @EnvironmentObject private var gameManager: GameManager
     var body: some View {
         VStack {
@@ -45,15 +45,15 @@ struct OptionsView: View {
                         HStack {
                             Spacer()
                             Picker(selection: $settings.difficulty) {
-                                Text(AppSettings.Difficulty.turtle.rawValue).tag(AppSettings.Difficulty.turtle)
+                                Text(GameSettings.Difficulty.turtle.rawValue).tag(GameSettings.Difficulty.turtle)
                                     .font(.customCaption)
-                                Text(AppSettings.Difficulty.easy.rawValue).tag(AppSettings.Difficulty.easy)
+                                Text(GameSettings.Difficulty.easy.rawValue).tag(GameSettings.Difficulty.easy)
                                     .font(.customCaption)
-                                Text(AppSettings.Difficulty.medium.rawValue).tag(AppSettings.Difficulty.medium)
+                                Text(GameSettings.Difficulty.medium.rawValue).tag(GameSettings.Difficulty.medium)
                                     .font(.customCaption)
-                                Text(AppSettings.Difficulty.hard.rawValue).tag(AppSettings.Difficulty.hard)
+                                Text(GameSettings.Difficulty.hard.rawValue).tag(GameSettings.Difficulty.hard)
                                     .font(.customCaption)
-                                Text(AppSettings.Difficulty.lightning.rawValue).tag(AppSettings.Difficulty.lightning)
+                                Text(GameSettings.Difficulty.lightning.rawValue).tag(GameSettings.Difficulty.lightning)
                                     .font(.customCaption)
                             } label: {
                                 Text("Timer Difficult Selection")

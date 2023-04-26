@@ -1,5 +1,5 @@
 //
-//  AppSettings.swift
+//  GameSettings.swift
 //  DataSim
 //
 //  Created by Carson Rau on 4/25/23.
@@ -8,8 +8,8 @@
 import SwiftUI
 import Combine
 
-class AppSettings: ObservableObject {
-    @Published public var primaryColor: Color = .black
+class GameSettings: ObservableObject {
+    @Published public var primaryColor: Color = .primary
     @Published public var enableTimer: Bool = true
     @Published public var enableHardMode: Bool = false
     @Published public var difficulty: Difficulty = .easy

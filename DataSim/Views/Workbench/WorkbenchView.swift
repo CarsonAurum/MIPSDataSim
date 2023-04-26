@@ -17,7 +17,7 @@ struct WorkbenchView: View {
     /// The environment-wide processor.
     @EnvironmentObject var proc: MIPSProcessor
     @EnvironmentObject var manager: GameManager
-    @EnvironmentObject var settings: AppSettings
+    @EnvironmentObject var settings: GameSettings
     
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
