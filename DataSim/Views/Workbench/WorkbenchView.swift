@@ -22,7 +22,6 @@ struct WorkbenchView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    
     /// Which element is currently selected within the workbench.
     ///
     /// - Note: Due to the way the @State wrapper works with tuples, the updates will only occur when
@@ -87,54 +86,61 @@ struct WorkbenchView: View {
                     )
                 }
                 Spacer()
-                Text("Time Remaining: \(formattedTime(manager.timeRemaining))")
-                    .padding([.top], 15)
-                    .foregroundColor(timerColor)
-                    .font(.customSubtitle)
-                    .onReceive(timer) { _ in
-                        if !manager.isPaused && manager.timeRemaining > 0 {
-                            manager.timeRemaining -= 1
-                        } else {
-                            timer.upstream.connect().cancel()
+                if settings.enableTimer {
+                    Text("Time Remaining: \(formattedTime(manager.timeRemaining))")
+                        .padding([.top], 15)
+                        .foregroundColor(timerColor)
+                        .font(.customSubtitle)
+                        .onReceive(timer) { _ in
+                            if !manager.isPaused && manager.timeRemaining > 0 {
+                                manager.timeRemaining -= 1
+                            } else {
+                                timer.upstream.connect().cancel()
+                            }
                         }
-                    }
-                    .onReceive(timer) { _ in
-                        if manager.timeRemaining == 601 {
-                            Haptic.play([
-                                .haptic(.impact(.soft)),
-                                .wait(0.5),
-                                .haptic(.impact(.soft))
-                            ])
+                        .onReceive(timer) { _ in
+                            if settings.enableTimer && settings.enableHaptics && manager.timeRemaining == 601 {
+                                Haptic.play([
+                                    .haptic(.impact(.soft)),
+                                    .wait(0.5),
+                                    .haptic(.impact(.soft))
+                                ])
+                            }
+                            if settings.enableTimer && settings.enableHaptics && manager.timeRemaining == 301 {
+                                Haptic.play([
+                                    .haptic(.impact(.medium)),
+                                    .wait(0.5),
+                                    .haptic(.impact(.medium))
+                                ])
+                            }
+                            if settings.enableTimer && settings.enableHaptics && manager.timeRemaining == 61 {
+                                Haptic.play([
+                                    .haptic(.impact(.heavy)),
+                                    .wait(0.5),
+                                    .haptic(.impact(.heavy))
+                                ])
+                                timerColor = .red
+                            }
+                            if settings.enableTimer && settings.enableHaptics && manager.timeRemaining == 31 {
+                                Haptic.play([
+                                    .haptic(.impact(.rigid)),
+                                    .wait(0.5),
+                                    .haptic(.impact(.rigid))
+                                ])
+                            }
+                            if settings.enableTimer && settings.enableHaptics && manager.timeRemaining < 10 {
+                                Haptic.play([.haptic(.impact(.heavy))])
+                            }
+                            if settings.enableTimer && manager.timeRemaining == 0 {
+                                gameOver()
+                            }
                         }
-                        if manager.timeRemaining == 301 {
-                            Haptic.play([
-                                .haptic(.impact(.medium)),
-                                .wait(0.5),
-                                .haptic(.impact(.medium))
-                            ])
-                        }
-                        if manager.timeRemaining == 61 {
-                            Haptic.play([
-                                .haptic(.impact(.heavy)),
-                                .wait(0.5),
-                                .haptic(.impact(.heavy))
-                            ])
-                            timerColor = .red
-                        }
-                        if manager.timeRemaining == 31 {
-                            Haptic.play([
-                                .haptic(.impact(.rigid)),
-                                .wait(0.5),
-                                .haptic(.impact(.rigid))
-                            ])
-                        }
-                        if manager.timeRemaining < 10 {
-                            Haptic.play([.haptic(.impact(.heavy))])
-                        }
-                        if manager.timeRemaining == 0 {
-                            gameOver()
-                        }
-                    }
+                }
+            }
+        }
+        .onAppear {
+            if !settings.enableTimer {
+                timer.upstream.connect().cancel()
             }
         }
     }

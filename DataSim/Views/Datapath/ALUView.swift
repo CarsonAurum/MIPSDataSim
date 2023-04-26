@@ -53,7 +53,7 @@ struct ALUView: View {
                         // Ensure an output has previously been selected for this input.
                         guard let curSelection = curSelection else {
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return
@@ -61,7 +61,7 @@ struct ALUView: View {
                         // Ensure this input is open for a connection.
                         guard obj.inputA.isNone else {
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return
@@ -91,14 +91,14 @@ struct ALUView: View {
                     .onTapGesture {
                         guard let curSelection = curSelection else {
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return
                         }
                         guard obj.inputB.isNone else {
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return
@@ -133,7 +133,7 @@ struct ALUView: View {
                                 return
                             }
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return
@@ -141,7 +141,7 @@ struct ALUView: View {
                         // Ensure this connection is available.
                         guard obj.outputA.isNone else {
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return
@@ -170,13 +170,13 @@ struct ALUView: View {
                                 return
                             }
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5                            }
                             return
                         }
                         guard obj.outputB.isNone else {
                             shaking.toggle()
-                            if (settings.enableHardMode) {
+                            if settings.enableTimer && settings.enableHardMode {
                                 manager.timeRemaining -= 5
                             }
                             return

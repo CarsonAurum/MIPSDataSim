@@ -9,8 +9,13 @@ import SwiftUI
 
 struct CreditsView: View {
     var body: some View {
-        HStack(alignment: .center) {
+        HStack(alignment: .top) {
+            Spacer()
             VStack(alignment: .center) {
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .animation(.default)
                 Text("Carson Rau")
                     .font(.customBody)
                     .foregroundColor(.primary)
@@ -19,7 +24,13 @@ struct CreditsView: View {
                     .font(.customSubtitle)
                     .foregroundColor(.blue)
             }
+            .animation(.default)
+            Spacer()
             VStack(alignment: .center) {
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .animation(.default)
                 Text("Dillon Fleharty")
                     .font(.customBody)
                     .foregroundColor(.primary)
@@ -28,7 +39,13 @@ struct CreditsView: View {
                     .font(.customSubtitle)
                     .foregroundColor(.blue)
             }
+            .animation(.default)
+            Spacer()
             VStack(alignment: .center) {
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .animation(.default)
                 Text("Rene Carbajal")
                     .font(.customBody)
                     .foregroundColor(.primary)
@@ -37,6 +54,8 @@ struct CreditsView: View {
                     .font(.customSubtitle)
                     .foregroundColor(.blue)
             }
+            .animation(.default)
+            Spacer()
         }
     }
 }

@@ -17,10 +17,13 @@ struct HelpView: View {
                         .padding([.leading], 20)
                     Spacer()
                 }
+                .animation(.default)
                 Spacer()
                 Text("Help coming soon.")
                     .font(.customCaption)
                     .foregroundColor(.blue)
+                    .animation(.default)
+                
             }
         }
     }

@@ -24,6 +24,7 @@ struct OptionsView: View {
                     .multilineTextAlignment(.center)
                     .font(.customBody)
                     .padding([.top, .bottom], 30)
+                    .animation(.default)
             } else {
                 HStack {
                     Spacer()
@@ -54,6 +55,8 @@ struct OptionsView: View {
                                 Text(GameSettings.Difficulty.hard.rawValue).tag(GameSettings.Difficulty.hard)
                                     .font(.customCaption)
                                 Text(GameSettings.Difficulty.lightning.rawValue).tag(GameSettings.Difficulty.lightning)
+                                    .font(.customCaption)
+                                Text(GameSettings.Difficulty.demo.rawValue).tag(GameSettings.Difficulty.demo)
                                     .font(.customCaption)
                             } label: {
                                 Text("Timer Difficult Selection")
@@ -100,6 +103,15 @@ struct OptionsView: View {
                 Spacer()
             }
             .animation(.default)
+            HStack {
+                Toggle(isOn: $settings.enableHaptics) {
+                    Text("Enable Haptics")
+                        .font(.customBody)
+                }
+                    .fixedSize()
+            }
+            .animation(.default)
+            Spacer()
         }
     }
 }
