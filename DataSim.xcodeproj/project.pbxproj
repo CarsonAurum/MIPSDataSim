@@ -126,6 +126,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		E51B592229F99D9200C981A8 /* Workbench */ = {
+			isa = PBXGroup;
+			children = (
+				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
+			);
+			path = Workbench;
+			sourceTree = "<group>";
+		};
 		E531824A29C93438004A9793 = {
 			isa = PBXGroup;
 			children = (
@@ -190,11 +198,11 @@
 		E531828129C934EF004A9793 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E51B592229F99D9200C981A8 /* Workbench */,
 				E569838D29E251A400F140A5 /* Effects */,
 				E531828729C94165004A9793 /* Shapes */,
 				E574626F29CB6929005A3434 /* Datapath */,
 				E531825829C93438004A9793 /* MainView.swift */,
-				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
 				E54F8B6529DB3CB600022498 /* OptionsView.swift */,
 				E54F8B6729DB3D1F00022498 /* HelpView.swift */,
 				E54F8B6929DB3D5B00022498 /* CreditsView.swift */,

@@ -30,14 +30,16 @@ struct WorkbenchView: View {
     /// not cause changes in the UI.
     @State private var selectedElement: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
     @State private var selectedQuit: Bool = false
+    @State private var timerColor: Color = .primary
     
     
     // TODO: - Scaling & Panning
     
     var topBar: some View {
         GeometryReader { geo in
-            HStack {
+            HStack(alignment: .center) {
                 Group {
+                    // Pause Button
                     Button {
                         dismissal()
                         manager.isPaused.toggle()
@@ -50,6 +52,8 @@ struct WorkbenchView: View {
                         x: 2 * geo.size.height / 30,
                         y: geo.size.width / 30
                     )
+                    
+                    // Quit Button
                     Button {
                         selectedQuit = true
                     } label: {
@@ -68,6 +72,8 @@ struct WorkbenchView: View {
                             selectedQuit = false
                         })
                     }
+                    
+                    // Undo Button
                     Button {
                         // TODO: Undo capabilities
                     } label: {
@@ -82,12 +88,51 @@ struct WorkbenchView: View {
                 }
                 Spacer()
                 Text("Time Remaining: \(formattedTime(manager.timeRemaining))")
+                    .padding([.top], 15)
+                    .foregroundColor(timerColor)
                     .font(.customSubtitle)
                     .onReceive(timer) { _ in
                         if !manager.isPaused && manager.timeRemaining > 0 {
                             manager.timeRemaining -= 1
                         } else {
                             timer.upstream.connect().cancel()
+                        }
+                    }
+                    .onReceive(timer) { _ in
+                        if manager.timeRemaining == 601 {
+                            Haptic.play([
+                                .haptic(.impact(.soft)),
+                                .wait(0.5),
+                                .haptic(.impact(.soft))
+                            ])
+                        }
+                        if manager.timeRemaining == 301 {
+                            Haptic.play([
+                                .haptic(.impact(.medium)),
+                                .wait(0.5),
+                                .haptic(.impact(.medium))
+                            ])
+                        }
+                        if manager.timeRemaining == 61 {
+                            Haptic.play([
+                                .haptic(.impact(.heavy)),
+                                .wait(0.5),
+                                .haptic(.impact(.heavy))
+                            ])
+                            timerColor = .red
+                        }
+                        if manager.timeRemaining == 31 {
+                            Haptic.play([
+                                .haptic(.impact(.rigid)),
+                                .wait(0.5),
+                                .haptic(.impact(.rigid))
+                            ])
+                        }
+                        if manager.timeRemaining < 10 {
+                            Haptic.play([.haptic(.impact(.heavy))])
+                        }
+                        if manager.timeRemaining == 0 {
+                            gameOver()
                         }
                     }
             }
@@ -191,6 +236,13 @@ struct WorkbenchView: View {
         dismissal()
         manager.reset(settings.getTimeRemaining())
         proc.reset()
+    }
+    func gameOver() {
+        // TODO: Initiate checking.
+        Haptic.play("XXOOXXOOXX", delay: 0.2)
+        let _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+            self.timerColor = [.red, .yellow, .primary].randomElement() ?? .primary
+           }
     }
 }
 

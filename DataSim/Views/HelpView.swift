@@ -9,7 +9,20 @@ import SwiftUI
 
 struct HelpView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack(alignment: .center) {
+                HStack {
+                    Text("Gameplay and Datapath Help")
+                        .font(.customLargeTitle)
+                        .padding([.leading], 20)
+                    Spacer()
+                }
+                Spacer()
+                Text("Help coming soon.")
+                    .font(.customCaption)
+                    .foregroundColor(.blue)
+            }
+        }
     }
 }
 

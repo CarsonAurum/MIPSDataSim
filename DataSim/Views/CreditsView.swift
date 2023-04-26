@@ -9,7 +9,35 @@ import SwiftUI
 
 struct CreditsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .center) {
+            VStack(alignment: .center) {
+                Text("Carson Rau")
+                    .font(.customBody)
+                    .foregroundColor(.primary)
+                Text("App Design and UX Development")
+                    .multilineTextAlignment(.center)
+                    .font(.customSubtitle)
+                    .foregroundColor(.blue)
+            }
+            VStack(alignment: .center) {
+                Text("Dillon Fleharty")
+                    .font(.customBody)
+                    .foregroundColor(.primary)
+                Text("Image/Graphic Design and Processor Modelling")
+                    .multilineTextAlignment(.center)
+                    .font(.customSubtitle)
+                    .foregroundColor(.blue)
+            }
+            VStack(alignment: .center) {
+                Text("Rene Carbajal")
+                    .font(.customBody)
+                    .foregroundColor(.primary)
+                Text("Instruction encoding and Processor Modelling")
+                    .multilineTextAlignment(.center)
+                    .font(.customSubtitle)
+                    .foregroundColor(.blue)
+            }
+        }
     }
 }
 
