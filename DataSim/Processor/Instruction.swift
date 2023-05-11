@@ -7,34 +7,18 @@
 
 import Foundation
 
+protocol MIPSInstruction {
+    var name: String { get }
+    var exampleUsage: String { get }
+    var alu: ALU { get }
+    var pc: ProgramCounter { get }
+    var adder: [Adder]? { get }
+    var signExt: [SignExtender]? { get }
+}
+
 struct Instruction {
     // Instruction Identification
     let type: MIPSType
-    let name: String
-    let exampleUsage: String
-    // Datapath Components
-    var alu: ALU {
-        let ret = ALU()
-        
-        //ret.outputA = (nil, .mux, .inA)
-        //ret.inputA = (nil, .pc, .outA)
-        
-        return ret
-    }
-    
-    /*
-    var mux: Mux {
-        ret.inputB = (nil, .alu)
-    }
-    
-    var adder1: Adder {
-        
-    }
-    
-    var adder2: Adder {
-        
-    }
-     */
 }
 
 extension Instruction {

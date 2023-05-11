@@ -35,6 +35,11 @@
 		E569839129E2536B00F140A5 /* MIPSProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569839029E2536B00F140A5 /* MIPSProcessor.swift */; };
 		E56CFB152A0D72D100E85259 /* ProgramCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB142A0D72D100E85259 /* ProgramCounter.swift */; };
 		E56CFB172A0D732500E85259 /* SignExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB162A0D732500E85259 /* SignExtender.swift */; };
+		E56CFB192A0D762D00E85259 /* Multiplexor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB182A0D762D00E85259 /* Multiplexor.swift */; };
+		E56CFB1B2A0D763D00E85259 /* RegisterFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB1A2A0D763D00E85259 /* RegisterFile.swift */; };
+		E56CFB1D2A0D765C00E85259 /* InstructionMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB1C2A0D765C00E85259 /* InstructionMemory.swift */; };
+		E56CFB1F2A0D767200E85259 /* DataMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB1E2A0D767200E85259 /* DataMemory.swift */; };
+		E56CFB212A0D768200E85259 /* Shifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB202A0D768200E85259 /* Shifter.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 		E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* GameSettings.swift */; };
 		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
@@ -90,6 +95,11 @@
 		E569839029E2536B00F140A5 /* MIPSProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIPSProcessor.swift; sourceTree = "<group>"; };
 		E56CFB142A0D72D100E85259 /* ProgramCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCounter.swift; sourceTree = "<group>"; };
 		E56CFB162A0D732500E85259 /* SignExtender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignExtender.swift; sourceTree = "<group>"; };
+		E56CFB182A0D762D00E85259 /* Multiplexor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplexor.swift; sourceTree = "<group>"; };
+		E56CFB1A2A0D763D00E85259 /* RegisterFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFile.swift; sourceTree = "<group>"; };
+		E56CFB1C2A0D765C00E85259 /* InstructionMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionMemory.swift; sourceTree = "<group>"; };
+		E56CFB1E2A0D767200E85259 /* DataMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMemory.swift; sourceTree = "<group>"; };
+		E56CFB202A0D768200E85259 /* Shifter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifter.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		E5FC120E29F868A5006804C6 /* PCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCView.swift; sourceTree = "<group>"; };
@@ -240,6 +250,11 @@
 				E54F8B7F29DF60E900022498 /* Adder.swift */,
 				E56CFB142A0D72D100E85259 /* ProgramCounter.swift */,
 				E56CFB162A0D732500E85259 /* SignExtender.swift */,
+				E56CFB182A0D762D00E85259 /* Multiplexor.swift */,
+				E56CFB1A2A0D763D00E85259 /* RegisterFile.swift */,
+				E56CFB1C2A0D765C00E85259 /* InstructionMemory.swift */,
+				E56CFB1E2A0D767200E85259 /* DataMemory.swift */,
+				E56CFB202A0D768200E85259 /* Shifter.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -411,9 +426,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56CFB192A0D762D00E85259 /* Multiplexor.swift in Sources */,
 				E56CFB152A0D72D100E85259 /* ProgramCounter.swift in Sources */,
+				E56CFB1F2A0D767200E85259 /* DataMemory.swift in Sources */,
 				E54F8B7629DE0A4300022498 /* DatapathElement.swift in Sources */,
 				E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */,
+				E56CFB212A0D768200E85259 /* Shifter.swift in Sources */,
 				E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */,
 				E51B591F29F9817200C981A8 /* GameManager.swift in Sources */,
 				E54F8B8029DF60E900022498 /* Adder.swift in Sources */,
@@ -428,8 +446,10 @@
 				E51B591D29F977B000C981A8 /* Font++.swift in Sources */,
 				E54F8B6629DB3CB600022498 /* OptionsView.swift in Sources */,
 				E54F8B7029DE037200022498 /* SignExtenderView.swift in Sources */,
+				E56CFB1B2A0D763D00E85259 /* RegisterFile.swift in Sources */,
 				E5FC120F29F868A5006804C6 /* PCView.swift in Sources */,
 				E569838F29E251B100F140A5 /* ShakeEffect.swift in Sources */,
+				E56CFB1D2A0D765C00E85259 /* InstructionMemory.swift in Sources */,
 				E574627429CB6AA6005A3434 /* Instruction.swift in Sources */,
 				E538518A29CB65C200CF59DA /* ALUView.swift in Sources */,
 				E569839129E2536B00F140A5 /* MIPSProcessor.swift in Sources */,

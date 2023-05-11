@@ -170,26 +170,19 @@ struct WorkbenchView: View {
                 ALUView(obj: $alu, curSelection: $selectedElement)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
-//                    .position(x: 30, y: 30)
-                    .position(x: viewPositions[alu.id]?.width ?? 30, y: viewPositions[alu.id]?.height ?? 30)
-                    .gesture(
-                        DragGesture()
-                            .onChanged { value in
-                                let current = self.viewPositions[alu.id] ?? CGSize(width: 30, height: 30)
-                                self.viewPositions[alu.id] = CGSize(width: current.width + value.translation.width, height: current.height + value.translation.height)
-                            }
-                            .onEnded { value in
-                                let current = self.viewPositions[alu.id] ?? CGSize(width: 30, height: 30)
-                                self.viewPositions[alu.id] = CGSize(width: current.width + value.translation.width, height: current.height + value.translation.height)
-                            }
-
-                    )
+                    .position(x: 30, y: 30)
             }
+        }
+    }
+    
+    /// The collection of ALUs visible on the workbench.
+    var adders: some View {
+        GeometryReader { geo in
             ForEach($proc.adders, id: \.self) { $adder in
                 AdderView(obj: $adder, curSelection: $selectedElement)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
-                    .position(x: 30, y: 30)
+                    .position(x: -50, y: -50)
             }
         }
     }
@@ -203,12 +196,7 @@ struct WorkbenchView: View {
                 ScrollView([.horizontal, .vertical],
                            showsIndicators: false) {
                     alus
-                    //                        ForEach($adders) { obj in
-                    //                            AdderView(obj: obj, selectedElement: $selectedElement)
-                    //                                .frame(width: 75, height: 75)
-                    //                                .position(x: CGFloat((50...500).randomElement()!),
-                    //                                          y: CGFloat((50...500).randomElement()!))
-                    //                        }
+                    adders
                 }
                            .onTapGesture {
                                if selectedElement != nil {
