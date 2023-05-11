@@ -21,9 +21,9 @@ with other objects proved to be a nearly impossible task. As such, we chose to f
 ALU. Placing a single ALU on the game workbench within a game, a player is able to test all of the key connection functionalities 
 of the game:
   
-  [1] Input connections cannot be selected prior to another output being selected.
-  [2] An output cannot be connected to another output.
-  [3] An input, once connected to an output, retains its connection, and it cannot be connected to another element.
+  1. Input connections cannot be selected prior to another output being selected.
+  2. An output cannot be connected to another output.
+  3. An input, once connected to an output, retains its connection, and it cannot be connected to another element.
 
 
 Because the state of the UI makes the inner mechanics of this game effectively un testable, this document provides a walk through 
