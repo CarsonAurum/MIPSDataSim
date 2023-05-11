@@ -4,12 +4,12 @@
 <array>
 	<dict>
 		<key>shifters</key>
-		<dict/>
+		<array/>
 		<key>muxes</key>
-		<dict/>
+		<array/>
 		<key>signExts</key>
-		<dict/>
-		<key>MIPType</key>
+		<array/>
+		<key>MIPSType</key>
 		<string>rFormat</string>
 		<key>pc</key>
 		<dict>
@@ -29,8 +29,7 @@
 			</dict>
 		</dict>
 		<key>adders</key>
-		<dict>
-			<key>adder0</key>
+		<array>
 			<dict>
 				<key>outA</key>
 				<dict>
@@ -54,7 +53,7 @@
 					<string></string>
 				</dict>
 			</dict>
-		</dict>
+		</array>
 		<key>alu</key>
 		<dict>
 			<key>outA</key>

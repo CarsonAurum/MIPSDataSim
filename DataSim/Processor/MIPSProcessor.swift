@@ -19,11 +19,6 @@ class MIPSProcessor: ObservableObject {
     // @Published var shifters: [Shifter] = []
     
     public init() {
-        var nsDictionary: NSDictionary?
-         if let path = Bundle.main.path(forResource: "data", ofType: "plist") {
-            nsDictionary = NSDictionary(contentsOfFile: path)
-             print(nsDictionary)
-         }
     }
     
     
