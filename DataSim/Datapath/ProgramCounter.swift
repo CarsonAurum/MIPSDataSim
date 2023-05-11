@@ -30,7 +30,11 @@ class ProgramCounter: DatapathElement, ObservableObject {
     
     
     static func == (lhs: ProgramCounter, rhs: ProgramCounter) -> Bool {
-        lhs.id == rhs.id
+        if lhs.inputA.isNone && lhs.outputA.isNone,
+           rhs.inputA.isNone && rhs.outputA.isNone { return true }
+        if lhs.inputA?.1 != rhs.inputA?.1 || lhs.inputA?.2 == rhs.inputA?.2 { return false }
+        if lhs.outputA?.1 != rhs.outputA?.1 || lhs.outputA?.2 == rhs.outputA?.2 { return false }
+        return true
     }
     
     func hash(into hasher: inout Hasher) {

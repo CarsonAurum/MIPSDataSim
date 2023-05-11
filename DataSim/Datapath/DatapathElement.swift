@@ -13,17 +13,11 @@ public enum DatapathComponent: String, CaseIterable, Equatable, Hashable {
          alu        = "ALU",
          mux        = "Mux",
          signExt    = "Sign Ext",
-         pc         = "PC"
-    // TODO:     regfile    = "Reg File
-    // TODO:     instMem    = "IM"
-    // TODO:     dataMem    = "DM"
-    // TODO:     shifter    = "Shifter"
-
-    // TODO:     AND        = "AND"
-    // TODO:     NAND       = "NAND"
-    // TODO:     OR         = "OR"
-    // TODO:     NOR        = "NOR"
-    // TODO:     NOT        = "NOT"
+         pc         = "PC",
+         regfile    = "Reg File",
+         instMem    = "IM",
+         dataMem    = "DM",
+         shifter    = "Shifter"
 }
 
 extension DatapathComponent {
@@ -56,6 +50,14 @@ extension DatapathElement {
             return "Sign Extension Unit"
         case .pc:
             return "Program Counter"
+        case .regfile:
+            return "Register File"
+        case .instMem:
+            return "Instruction Memory"
+        case .dataMem:
+            return "Data Memory"
+        case .shifter:
+            return "Shifter"
         }
     }
 }

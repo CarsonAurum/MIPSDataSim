@@ -24,6 +24,15 @@ struct DatapathElementPreviewView: View {
             SignExtenderLineView()
         case .pc:
             EmptyView()
+        case .regfile:
+            EmptyView()
+        case .instMem:
+            EmptyView()
+        case .dataMem:
+            EmptyView()
+        case .shifter:
+            EmptyView()
+
         }
     }
 }
