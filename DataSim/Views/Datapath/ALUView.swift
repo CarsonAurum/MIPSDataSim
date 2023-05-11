@@ -14,9 +14,6 @@ struct ALUView: View {
     
     @EnvironmentObject var settings: GameSettings
     @EnvironmentObject var manager: GameManager
-    
-    //TODO: Use the offset to denote a long-press before removing this ALU from the workbench.
-    @State private var scale: CGFloat = 0.0
     /// The shaking variable to control the rejection animation for improper actions.
     @State private var shaking: Bool = false
     /// The model representing the ALU presented in this view.

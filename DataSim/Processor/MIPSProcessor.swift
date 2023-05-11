@@ -25,5 +25,8 @@ class MIPSProcessor: ObservableObject {
         signExtenders.removeAll()
         muxes.removeAll()
         regFile = nil
+        instructionMem = nil
+        dataMem = nil
+        shifters.removeAll()
     }
 }

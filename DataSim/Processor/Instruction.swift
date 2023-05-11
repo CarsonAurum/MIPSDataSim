@@ -37,7 +37,7 @@ struct Instruction: MIPSInstruction {
             .init(),
             .init(rawValue: inA["obj"]!)!,
             .init(rawValue: inA["src"]!)!)
-        var inB = ((data["alu"] as! [String:Any])["inB"] as! [String:String])
+        let inB = ((data["alu"] as! [String:Any])["inB"] as! [String:String])
         alu.inputB = (
             .init(),
             .init(rawValue: inB["obj"]!)!,
@@ -62,10 +62,10 @@ struct Instruction: MIPSInstruction {
             .init(rawValue: outA["src"]!)!)
         
         // Import Adder Settings
-        adder = .init()
-        var adders = data["adders"] as! [[String:[String:String]]]
+        adder = []
+        let adders = data["adders"] as! [[String:[String:String]]]
         for dict in adders {
-            var newAdder: Adder = .init()
+            let newAdder: Adder = .init()
             newAdder.inputA = (
                 .init(),
                 .init(rawValue: dict["inA"]!["obj"]!)!,

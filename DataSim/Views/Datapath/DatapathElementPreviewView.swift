@@ -23,13 +23,13 @@ struct DatapathElementPreviewView: View {
         case .signExt:
             SignExtenderLineView()
         case .pc:
-            EmptyView()
+            PCView()
         case .regfile:
             RegFileView()
         case .instMem:
             IMemView()
         case .dataMem:
-            EmptyView()
+            DMemView()
         case .shifter:
             EmptyView()
 

@@ -44,6 +44,8 @@
 		E56CFB252A0D8E2300E85259 /* RegFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB242A0D8E2300E85259 /* RegFileView.swift */; };
 		E56CFB272A0D923C00E85259 /* IMemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB262A0D923C00E85259 /* IMemView.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
+		E5C39C6B2A0DA93B0023869C /* DMemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39C6A2A0DA93B0023869C /* DMemView.swift */; };
+		E5C39C6D2A0DA95B0023869C /* ShifterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39C6C2A0DA95B0023869C /* ShifterView.swift */; };
 		E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* GameSettings.swift */; };
 		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,8 @@
 		E56CFB242A0D8E2300E85259 /* RegFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegFileView.swift; sourceTree = "<group>"; };
 		E56CFB262A0D923C00E85259 /* IMemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMemView.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
+		E5C39C6A2A0DA93B0023869C /* DMemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMemView.swift; sourceTree = "<group>"; };
+		E5C39C6C2A0DA95B0023869C /* ShifterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShifterView.swift; sourceTree = "<group>"; };
 		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		E5FC120E29F868A5006804C6 /* PCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,6 +280,8 @@
 				E5FC120E29F868A5006804C6 /* PCView.swift */,
 				E56CFB242A0D8E2300E85259 /* RegFileView.swift */,
 				E56CFB262A0D923C00E85259 /* IMemView.swift */,
+				E5C39C6A2A0DA93B0023869C /* DMemView.swift */,
+				E5C39C6C2A0DA95B0023869C /* ShifterView.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */,
 				E56CFB212A0D768200E85259 /* Shifter.swift in Sources */,
 				E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */,
+				E5C39C6B2A0DA93B0023869C /* DMemView.swift in Sources */,
 				E51B591F29F9817200C981A8 /* GameManager.swift in Sources */,
 				E54F8B8029DF60E900022498 /* Adder.swift in Sources */,
 				E56CFB252A0D8E2300E85259 /* RegFileView.swift in Sources */,
@@ -445,6 +452,7 @@
 				E531825929C93438004A9793 /* MainView.swift in Sources */,
 				E56CFB272A0D923C00E85259 /* IMemView.swift in Sources */,
 				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
+				E5C39C6D2A0DA95B0023869C /* ShifterView.swift in Sources */,
 				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,
 				E56CFB172A0D732500E85259 /* SignExtender.swift in Sources */,
 				E51B591D29F977B000C981A8 /* Font++.swift in Sources */,

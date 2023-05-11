@@ -233,11 +233,12 @@ struct WorkbenchView: View {
         proc.reset()
     }
     func gameOver() {
-        // TODO: Initiate checking.
         Haptic.play("XXOOXXOOXX", delay: 0.2)
         let _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             self.timerColor = [.red, .yellow, .primary].randomElement() ?? .primary
            }
+        // Call the grader
+        manager.grade()
     }
 }
 

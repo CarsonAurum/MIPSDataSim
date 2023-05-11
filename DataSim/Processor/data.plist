@@ -41,16 +41,16 @@
 				<key>inA</key>
 				<dict>
 					<key>obj</key>
-					<string>Const 4</string>
+					<string>IM</string>
 					<key>src</key>
 					<string>outA</string>
 				</dict>
 				<key>inB</key>
 				<dict>
 					<key>obj</key>
-					<string></string>
+					<string>IM</string>
 					<key>src</key>
-					<string></string>
+					<string>outD</string>
 				</dict>
 			</dict>
 		</array>
@@ -59,14 +59,14 @@
 			<key>outA</key>
 			<dict>
 				<key>obj</key>
-				<string>RegFile</string>
+				<string>Reg File</string>
 				<key>src</key>
 				<string>inD</string>
 			</dict>
 			<key>inB</key>
 			<dict>
 				<key>obj</key>
-				<string>RegFile</string>
+				<string>Reg File</string>
 				<key>src</key>
 				<string>outB</string>
 			</dict>
