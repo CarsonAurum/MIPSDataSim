@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShifterView: View {
     var body: some View {
-        EmptyView()
+        Image("Shifter")
+            .resizable()
     }
 }
