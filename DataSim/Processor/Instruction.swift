@@ -64,7 +64,7 @@ struct Instruction: MIPSInstruction {
         // Import Adder Settings
         adder = .init()
         var adders = data["adders"] as! [[String:[String:String]]]
-        adders.forEach { dict in
+        for dict in adders {
             var newAdder: Adder = .init()
             newAdder.inputA = (
                 .init(),
@@ -78,6 +78,7 @@ struct Instruction: MIPSInstruction {
                 .init(),
                 .init(rawValue: dict["outA"]!["obj"]!)!,
                 .init(rawValue: dict["outA"]!["src"]!)!)
+            adder!.append(newAdder)
         }
         signExt = .init()
         type = .init(rawValue: data["MIPSType"]! as! String)!

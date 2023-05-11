@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PCView: View {
     var body: some View {
-        EmptyView()
+        Image("PC")
+            .resizable()
     }
 }
