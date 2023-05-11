@@ -10,6 +10,57 @@ import SwiftUI
 struct OptionsView: View {
     @EnvironmentObject private var settings: GameSettings
     @EnvironmentObject private var gameManager: GameManager
+    
+    var timerSettings: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Picker(selection: $settings.difficulty) {
+                    Text(GameSettings.Difficulty.turtle.rawValue).tag(GameSettings.Difficulty.turtle)
+                        .font(.customCaption)
+                    Text(GameSettings.Difficulty.easy.rawValue).tag(GameSettings.Difficulty.easy)
+                        .font(.customCaption)
+                    Text(GameSettings.Difficulty.medium.rawValue).tag(GameSettings.Difficulty.medium)
+                        .font(.customCaption)
+                    Text(GameSettings.Difficulty.hard.rawValue).tag(GameSettings.Difficulty.hard)
+                        .font(.customCaption)
+                    Text(GameSettings.Difficulty.lightning.rawValue).tag(GameSettings.Difficulty.lightning)
+                        .font(.customCaption)
+                    Text(GameSettings.Difficulty.demo.rawValue).tag(GameSettings.Difficulty.demo)
+                        .font(.customCaption)
+                } label: {
+                    Text("Timer Difficult Selection")
+                        .font(.customBody)
+                }
+                .onChange(of: settings.difficulty) { newValue in
+                    gameManager.timeRemaining = settings.getTimeRemaining()
+                }
+                .pickerStyle(.inline)
+                Spacer()
+            }
+            VStack {
+                HStack {
+                    Spacer()
+                    Toggle(isOn: $settings.enableHardMode) {
+                        Text("Hard Mode")
+                            .font(.customBody)
+                    }
+                        .onChange(of: settings.enableHardMode) { newValue in
+                            if (!settings.enableTimer) {
+                                settings.enableHardMode = false
+                            }
+                        }
+                        .fixedSize()
+                    Spacer()
+                }
+                Text("Hardmode reduces time remaining on each incorrect connection.")
+                    .font(.customSubtitle)
+                    .foregroundColor(.gray)
+            }
+            
+        }
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -42,55 +93,9 @@ struct OptionsView: View {
                 }
                 .animation(.default)
                 if settings.enableTimer {
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Picker(selection: $settings.difficulty) {
-                                Text(GameSettings.Difficulty.turtle.rawValue).tag(GameSettings.Difficulty.turtle)
-                                    .font(.customCaption)
-                                Text(GameSettings.Difficulty.easy.rawValue).tag(GameSettings.Difficulty.easy)
-                                    .font(.customCaption)
-                                Text(GameSettings.Difficulty.medium.rawValue).tag(GameSettings.Difficulty.medium)
-                                    .font(.customCaption)
-                                Text(GameSettings.Difficulty.hard.rawValue).tag(GameSettings.Difficulty.hard)
-                                    .font(.customCaption)
-                                Text(GameSettings.Difficulty.lightning.rawValue).tag(GameSettings.Difficulty.lightning)
-                                    .font(.customCaption)
-                                Text(GameSettings.Difficulty.demo.rawValue).tag(GameSettings.Difficulty.demo)
-                                    .font(.customCaption)
-                            } label: {
-                                Text("Timer Difficult Selection")
-                                    .font(.customBody)
-                            }
-                            .onChange(of: settings.difficulty) { newValue in
-                                gameManager.timeRemaining = settings.getTimeRemaining()
-                            }
-                            .pickerStyle(.inline)
-                            Spacer()
-                        }
-                        VStack {
-                            HStack {
-                                Spacer()
-                                Toggle(isOn: $settings.enableHardMode) {
-                                    Text("Hard Mode")
-                                        .font(.customBody)
-                                }
-                                    .onChange(of: settings.enableHardMode) { newValue in
-                                        if (!settings.enableTimer) {
-                                            settings.enableHardMode = false
-                                        }
-                                    }
-                                    .fixedSize()
-                                Spacer()
-                            }
-                            Text("Hardmode reduces time remaining on each incorrect connection.")
-                                .font(.customSubtitle)
-                                .foregroundColor(.gray)
-                        }
-                        
-                    }
-                    .transition(.slide)
-                    .animation(.default)
+                    timerSettings
+                        .transition(.slide)
+                        .animation(.default)
                 }
             }
             HStack {

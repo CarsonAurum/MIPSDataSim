@@ -7,7 +7,20 @@
 
 import Foundation
 
-class Adder: ObservableObject {
+class Adder: DatapathElement, ObservableObject {
+    func setSelection(_ sel: (UUID, DatapathComponent, DatapathComponent.Connection)?) {
+        guard let selectedConnection = selectedConnection, let sel = sel else { return }
+        switch selectedConnection {
+        case .inA:
+            inputA = sel
+        case .inB:
+            inputB = sel
+        case .outA:
+            outputA = sel
+        default: return
+        }
+    }
+    
     func getSelection() -> (UUID, DatapathComponent, DatapathComponent.Connection)? {
         guard let selectedConnection = selectedConnection else { return nil }
         switch selectedConnection {

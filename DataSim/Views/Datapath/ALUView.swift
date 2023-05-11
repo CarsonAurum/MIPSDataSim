@@ -45,25 +45,13 @@ struct ALUView: View {
                 Circle()
                     .fill(.background)
                     .allowsHitTesting(true)
-                    .frame(width: geo.size.width / 4,
-                           height: geo.size.height / 4)
-                    .position(x: geo.size.width / 4,
-                              y: geo.size.height / 5)
+                    .frame(width: geo.size.width / 4, height: geo.size.height / 4)
+                    .position(x: geo.size.width / 4, y: geo.size.height / 5)
                     .onTapGesture {
                         // Ensure an output has previously been selected for this input.
-                        guard let curSelection = curSelection else {
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
-                            return
-                        }
                         // Ensure this input is open for a connection.
-                        guard obj.inputA.isNone else {
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
+                        guard let curSelection = curSelection, obj.inputA.isNone else {
+                            handleWrongTap()
                             return
                         }
                         // Determine what output was currently selected.
@@ -84,23 +72,11 @@ struct ALUView: View {
                 Circle()
                     .fill(.background)
                     .allowsHitTesting(true)
-                    .frame(width: geo.size.width / 4,
-                           height: geo.size.height / 4)
-                    .position(x: geo.size.width / 4,
-                              y: geo.size.height - geo.size.height / 5)
+                    .frame(width: geo.size.width / 4, height: geo.size.height / 4)
+                    .position(x: geo.size.width / 4, y: geo.size.height - geo.size.height / 5)
                     .onTapGesture {
-                        guard let curSelection = curSelection else {
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
-                            return
-                        }
-                        guard obj.inputB.isNone else {
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
+                        guard let curSelection = curSelection, obj.inputB.isNone else {
+                            handleWrongTap()
                             return
                         }
                         switch curSelection.1 {
@@ -132,18 +108,12 @@ struct ALUView: View {
                                 obj.selectedConnection = nil
                                 return
                             }
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
+                            handleWrongTap()
                             return
                         }
                         // Ensure this connection is available.
                         guard obj.outputA.isNone else {
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
+                            handleWrongTap()
                             return
                         }
                         // Select outputA on the object level for injection with setSelected()
@@ -169,16 +139,11 @@ struct ALUView: View {
                                 obj.selectedConnection = nil
                                 return
                             }
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5                            }
+                            handleWrongTap()
                             return
                         }
                         guard obj.outputB.isNone else {
-                            shaking.toggle()
-                            if settings.enableTimer && settings.enableHardMode {
-                                manager.timeRemaining -= 5
-                            }
+                            handleWrongTap()
                             return
                         }
                         obj.selectedConnection = .outB
@@ -249,6 +214,13 @@ struct ALUView: View {
             .animation(Animation.linear(duration: 0.3), value: shaking)
         }
     }
+    
+    func handleWrongTap() {
+        shaking.toggle()
+        if settings.enableTimer && settings.enableHardMode {
+            manager.timeRemaining -= 5
+        }
+    }
 }
 
 /// A preview of this datapath component containing static wires.
@@ -302,13 +274,3 @@ struct ALULineView: View {
         }
     }
 }
-
-/*
-struct ALUView_Previews: PreviewProvider {
-static var previews: some View {
-ALUView()
-.frame(width: 200, height: 200)
-//            .border(.blue, width: 5)
-}
-}
-*/

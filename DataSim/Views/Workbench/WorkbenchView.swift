@@ -71,19 +71,6 @@ struct WorkbenchView: View {
                             selectedQuit = false
                         })
                     }
-                    
-                    // Undo Button
-                    Button {
-                        // TODO: Undo capabilities
-                    } label: {
-                        Image(systemName: "arrow.uturn.backward")
-                            .foregroundColor(.primary)
-                            .imageScale(.large)
-                    }
-                    .position(
-                        x: geo.size.height / 30,
-                        y: geo.size.width / 30
-                    )
                 }
                 Spacer()
                 if settings.enableTimer {
@@ -178,16 +165,13 @@ struct WorkbenchView: View {
     var alus: some View {
         GeometryReader { geo in
             ForEach($proc.alus, id: \.self) { $alu in
-                let frame: CGRect = geo.frame(in: .named("workbench.scroll"))
                 ALUView(obj: $alu, curSelection: $selectedElement)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
-                // TODO: A better way for random positioning.
-                    .position(x: 30,
-                              y: 30)
-                            .onLongPressGesture {
-                                print("\(frame.minX)...\(frame.maxX)")
-                            }
+                    .position(x: 30, y: 30)
+            }
+            ForEach($proc.adders, id: \.self) { $adder in
+                AdderView(obj: $adder, curSelection: $selectedElement)
             }
         }
     }
