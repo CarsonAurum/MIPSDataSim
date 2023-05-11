@@ -43,7 +43,7 @@ class SignExtender: DatapathElement, ObservableObject {
     
     let id: UUID = .init()
     
-    let componentType: DatapathComponent = .pc
+    let componentType: DatapathComponent = .signExt
     
     @Published var inputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
     @Published var outputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil

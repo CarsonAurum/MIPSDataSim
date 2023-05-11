@@ -43,7 +43,7 @@ class Multiplexor: DatapathElement, ObservableObject {
     
     let id: UUID = .init()
     
-    let componentType: DatapathComponent = .pc
+    let componentType: DatapathComponent = .mux
     
     @Published var inputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
     @Published var outputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil

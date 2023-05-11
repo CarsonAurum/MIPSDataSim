@@ -14,14 +14,9 @@ class MIPSProcessor: ObservableObject {
     @Published var signExtenders: [SignExtender] = []
     @Published var muxes: [Multiplexor] = []
     @Published var regFile: RegisterFile? = nil
-    // @Published var instructionMem: InstructionMemory? = nil
-    // @Published var dataMem: DataMemory? = nil
-    // @Published var shifters: [Shifter] = []
-    
-    public init() {
-    }
-    
-    
+    @Published var instructionMem: InstructionMemory? = nil
+    @Published var dataMem: DataMemory? = nil
+    @Published var shifters: [Shifter] = []
     
     func reset() {
         alus.removeAll()

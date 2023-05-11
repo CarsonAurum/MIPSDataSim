@@ -59,7 +59,7 @@ class RegisterFile: DatapathElement, ObservableObject {
     
     let id: UUID = .init()
     
-    let componentType: DatapathComponent = .pc
+    let componentType: DatapathComponent = .regfile
     
     @Published var inputA: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
     @Published var inputB: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
