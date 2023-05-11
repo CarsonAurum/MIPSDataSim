@@ -8,7 +8,7 @@
 import Foundation
 
 class MIPSProcessor: ObservableObject {
-    @Published var alu: ALU? = nil
+    @Published var alus: [ALU] = []
     @Published var adders: [Adder] = []
     @Published var pc: ProgramCounter? = nil
     @Published var signExtenders: [SignExtender] = []

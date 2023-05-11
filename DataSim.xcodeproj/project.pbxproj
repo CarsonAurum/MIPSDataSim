@@ -41,6 +41,8 @@
 		E56CFB1F2A0D767200E85259 /* DataMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB1E2A0D767200E85259 /* DataMemory.swift */; };
 		E56CFB212A0D768200E85259 /* Shifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB202A0D768200E85259 /* Shifter.swift */; };
 		E56CFB232A0D866700E85259 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56CFB222A0D866700E85259 /* data.plist */; };
+		E56CFB252A0D8E2300E85259 /* RegFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB242A0D8E2300E85259 /* RegFileView.swift */; };
+		E56CFB272A0D923C00E85259 /* IMemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB262A0D923C00E85259 /* IMemView.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 		E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* GameSettings.swift */; };
 		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
@@ -102,6 +104,8 @@
 		E56CFB1E2A0D767200E85259 /* DataMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMemory.swift; sourceTree = "<group>"; };
 		E56CFB202A0D768200E85259 /* Shifter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifter.swift; sourceTree = "<group>"; };
 		E56CFB222A0D866700E85259 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		E56CFB242A0D8E2300E85259 /* RegFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegFileView.swift; sourceTree = "<group>"; };
+		E56CFB262A0D923C00E85259 /* IMemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMemView.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		E5FC120E29F868A5006804C6 /* PCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCView.swift; sourceTree = "<group>"; };
@@ -140,14 +144,6 @@
 				E51B591C29F977B000C981A8 /* Font++.swift */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		E51B592229F99D9200C981A8 /* Workbench */ = {
-			isa = PBXGroup;
-			children = (
-				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
-			);
-			path = Workbench;
 			sourceTree = "<group>";
 		};
 		E531824A29C93438004A9793 = {
@@ -214,7 +210,7 @@
 		E531828129C934EF004A9793 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E51B592229F99D9200C981A8 /* Workbench */,
+				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
 				E569838D29E251A400F140A5 /* Effects */,
 				E531828729C94165004A9793 /* Shapes */,
 				E574626F29CB6929005A3434 /* Datapath */,
@@ -278,6 +274,8 @@
 				E54F8B8129DF6D3200022498 /* DatapathElementPreviewView.swift */,
 				E54F8B8329DF6DC900022498 /* AdderView.swift */,
 				E5FC120E29F868A5006804C6 /* PCView.swift */,
+				E56CFB242A0D8E2300E85259 /* RegFileView.swift */,
+				E56CFB262A0D923C00E85259 /* IMemView.swift */,
 			);
 			path = Datapath;
 			sourceTree = "<group>";
@@ -439,11 +437,13 @@
 				E54F8B8429DF6DC900022498 /* AdderView.swift in Sources */,
 				E51B591F29F9817200C981A8 /* GameManager.swift in Sources */,
 				E54F8B8029DF60E900022498 /* Adder.swift in Sources */,
+				E56CFB252A0D8E2300E85259 /* RegFileView.swift in Sources */,
 				E54F8B8229DF6D3200022498 /* DatapathElementPreviewView.swift in Sources */,
 				E54F8B6E29DDFD7300022498 /* MuxView.swift in Sources */,
 				E54F8B6A29DB3D5B00022498 /* CreditsView.swift in Sources */,
 				E54F8B7429DE098D00022498 /* ALU.swift in Sources */,
 				E531825929C93438004A9793 /* MainView.swift in Sources */,
+				E56CFB272A0D923C00E85259 /* IMemView.swift in Sources */,
 				E531828429C9354E004A9793 /* ALUShape.swift in Sources */,
 				E54F8B6829DB3D1F00022498 /* HelpView.swift in Sources */,
 				E56CFB172A0D732500E85259 /* SignExtender.swift in Sources */,

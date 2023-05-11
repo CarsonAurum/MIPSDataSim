@@ -25,9 +25,9 @@ struct DatapathElementPreviewView: View {
         case .pc:
             EmptyView()
         case .regfile:
-            EmptyView()
+            RegFileView()
         case .instMem:
-            EmptyView()
+            IMemView()
         case .dataMem:
             EmptyView()
         case .shifter:
