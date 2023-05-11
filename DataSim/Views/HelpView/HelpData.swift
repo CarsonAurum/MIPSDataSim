@@ -52,5 +52,18 @@ struct HelpData {
         ]
     }
     
+    /*
+    struct Mux: HelpInfo {
+        
+    }
+    
+    struct Adder: HelpInfo {
+        
+    }
+    
+    struct SignExtension: HelpInfo {
+        
+    }
+    */
     static func getInfo(for kind: DatapathComponent) -> HelpInfo { info[kind]! }
 }
