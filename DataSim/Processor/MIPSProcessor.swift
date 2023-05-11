@@ -8,7 +8,7 @@
 import Foundation
 
 class MIPSProcessor: ObservableObject {
-    @Published var alus: [ALU] = []
+    @Published var alu: ALU? = nil
     @Published var adders: [Adder] = []
     @Published var pc: ProgramCounter? = nil
     @Published var signExtenders: [SignExtender] = []
@@ -17,6 +17,16 @@ class MIPSProcessor: ObservableObject {
     // @Published var instructionMem: InstructionMemory? = nil
     // @Published var dataMem: DataMemory? = nil
     // @Published var shifters: [Shifter] = []
+    
+    public init() {
+        var nsDictionary: NSDictionary?
+         if let path = Bundle.main.path(forResource: "data", ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+             print(nsDictionary)
+         }
+    }
+    
+    
     
     func reset() {
         alus.removeAll()

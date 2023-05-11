@@ -21,7 +21,7 @@ public enum DatapathComponent: String, CaseIterable, Equatable, Hashable {
 }
 
 extension DatapathComponent {
-    public enum Connection {
+    public enum Connection: String {
         case inA, inB, inC, inD
         case outA, outB, outC, outD
     }

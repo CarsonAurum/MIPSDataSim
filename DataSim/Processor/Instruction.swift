@@ -9,7 +9,7 @@ import Foundation
 
 protocol MIPSInstruction {
     var name: String { get }
-    var exampleUsage: String { get }
+    var usage: String { get }
     var alu: ALU { get }
     var pc: ProgramCounter { get }
     var adder: [Adder]? { get }
@@ -22,7 +22,7 @@ struct Instruction {
 }
 
 extension Instruction {
-    enum MIPSType {
+    enum MIPSType: String {
         case iFormat
         case rFormat
         case jFormat

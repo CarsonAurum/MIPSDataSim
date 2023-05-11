@@ -40,6 +40,7 @@
 		E56CFB1D2A0D765C00E85259 /* InstructionMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB1C2A0D765C00E85259 /* InstructionMemory.swift */; };
 		E56CFB1F2A0D767200E85259 /* DataMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB1E2A0D767200E85259 /* DataMemory.swift */; };
 		E56CFB212A0D768200E85259 /* Shifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB202A0D768200E85259 /* Shifter.swift */; };
+		E56CFB232A0D866700E85259 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56CFB222A0D866700E85259 /* data.plist */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
 		E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* GameSettings.swift */; };
 		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
@@ -100,6 +101,7 @@
 		E56CFB1C2A0D765C00E85259 /* InstructionMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionMemory.swift; sourceTree = "<group>"; };
 		E56CFB1E2A0D767200E85259 /* DataMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMemory.swift; sourceTree = "<group>"; };
 		E56CFB202A0D768200E85259 /* Shifter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifter.swift; sourceTree = "<group>"; };
+		E56CFB222A0D866700E85259 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		E5FC120E29F868A5006804C6 /* PCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCView.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		E574627229CB6A80005A3434 /* Processor */ = {
 			isa = PBXGroup;
 			children = (
+				E56CFB222A0D866700E85259 /* data.plist */,
 				E574627329CB6AA6005A3434 /* Instruction.swift */,
 				E569839029E2536B00F140A5 /* MIPSProcessor.swift */,
 			);
@@ -401,6 +404,7 @@
 			files = (
 				E531825F29C93439004A9793 /* Preview Assets.xcassets in Resources */,
 				E531825B29C93439004A9793 /* Assets.xcassets in Resources */,
+				E56CFB232A0D866700E85259 /* data.plist in Resources */,
 				E51B591929F9750E00C981A8 /* Bubblegum.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
