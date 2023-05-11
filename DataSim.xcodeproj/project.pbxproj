@@ -44,6 +44,8 @@
 		E56CFB252A0D8E2300E85259 /* RegFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB242A0D8E2300E85259 /* RegFileView.swift */; };
 		E56CFB272A0D923C00E85259 /* IMemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CFB262A0D923C00E85259 /* IMemView.swift */; };
 		E574627429CB6AA6005A3434 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574627329CB6AA6005A3434 /* Instruction.swift */; };
+		E57D2E222A0DAE2500DE5026 /* HelpDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D2E212A0DAE2500DE5026 /* HelpDetailView.swift */; };
+		E57D2E242A0DAE8D00DE5026 /* HelpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D2E232A0DAE8D00DE5026 /* HelpData.swift */; };
 		E5C39C6B2A0DA93B0023869C /* DMemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39C6A2A0DA93B0023869C /* DMemView.swift */; };
 		E5C39C6D2A0DA95B0023869C /* ShifterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39C6C2A0DA95B0023869C /* ShifterView.swift */; };
 		E5FC120D29F862CD006804C6 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120C29F862CD006804C6 /* GameSettings.swift */; };
@@ -109,6 +111,8 @@
 		E56CFB242A0D8E2300E85259 /* RegFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegFileView.swift; sourceTree = "<group>"; };
 		E56CFB262A0D923C00E85259 /* IMemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMemView.swift; sourceTree = "<group>"; };
 		E574627329CB6AA6005A3434 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
+		E57D2E212A0DAE2500DE5026 /* HelpDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailView.swift; sourceTree = "<group>"; };
+		E57D2E232A0DAE8D00DE5026 /* HelpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpData.swift; sourceTree = "<group>"; };
 		E5C39C6A2A0DA93B0023869C /* DMemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMemView.swift; sourceTree = "<group>"; };
 		E5C39C6C2A0DA95B0023869C /* ShifterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShifterView.swift; sourceTree = "<group>"; };
 		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
@@ -214,14 +218,13 @@
 		E531828129C934EF004A9793 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E57D2E202A0DAE1300DE5026 /* HelpView */,
 				E54F8B6329DB38EB00022498 /* WorkbenchView.swift */,
 				E569838D29E251A400F140A5 /* Effects */,
 				E531828729C94165004A9793 /* Shapes */,
 				E574626F29CB6929005A3434 /* Datapath */,
 				E531825829C93438004A9793 /* MainView.swift */,
 				E54F8B6529DB3CB600022498 /* OptionsView.swift */,
-				E54F8B6729DB3D1F00022498 /* HelpView.swift */,
-				E54F8B6929DB3D5B00022498 /* CreditsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +297,17 @@
 				E569839029E2536B00F140A5 /* MIPSProcessor.swift */,
 			);
 			path = Processor;
+			sourceTree = "<group>";
+		};
+		E57D2E202A0DAE1300DE5026 /* HelpView */ = {
+			isa = PBXGroup;
+			children = (
+				E54F8B6929DB3D5B00022498 /* CreditsView.swift */,
+				E54F8B6729DB3D1F00022498 /* HelpView.swift */,
+				E57D2E212A0DAE2500DE5026 /* HelpDetailView.swift */,
+				E57D2E232A0DAE8D00DE5026 /* HelpData.swift */,
+			);
+			path = HelpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,9 +478,11 @@
 				E56CFB1D2A0D765C00E85259 /* InstructionMemory.swift in Sources */,
 				E574627429CB6AA6005A3434 /* Instruction.swift in Sources */,
 				E538518A29CB65C200CF59DA /* ALUView.swift in Sources */,
+				E57D2E222A0DAE2500DE5026 /* HelpDetailView.swift in Sources */,
 				E569839129E2536B00F140A5 /* MIPSProcessor.swift in Sources */,
 				E54F8B6429DB38EB00022498 /* WorkbenchView.swift in Sources */,
 				E531825729C93438004A9793 /* DataSimApp.swift in Sources */,
+				E57D2E242A0DAE8D00DE5026 /* HelpData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

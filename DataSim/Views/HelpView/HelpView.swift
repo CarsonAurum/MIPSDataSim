@@ -17,12 +17,13 @@ struct HelpView: View {
                         .padding([.leading], 20)
                     Spacer()
                 }
+                .padding()
                 .animation(.default)
                 Spacer()
-                Text("Help coming soon.")
-                    .font(.customCaption)
-                    .foregroundColor(.blue)
-                    .animation(.default)
+                ForEach(DatapathComponent.allCases, id: \.self) { comp in
+                    
+                }
+                Spacer()
                 
             }
         }

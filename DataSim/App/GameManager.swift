@@ -18,7 +18,7 @@ class GameManager: ObservableObject {
     
     public init() {
         if let path = Bundle.main.path(forResource: "data", ofType: "plist") {
-            var arr = NSArray(contentsOfFile: path) as! [Dictionary<String,Any>]
+            let arr = NSArray(contentsOfFile: path) as! [Dictionary<String,Any>]
             for dict in arr {
                 instructions += .init(dict)
             }
@@ -31,8 +31,11 @@ class GameManager: ObservableObject {
         self.timeRemaining = ti
     }
     
-    func grade() {
+    func grade(_ obj: MIPSProcessor) -> Bool {
         isPaused = true
-        
+        if obj.alus.first! != currentInstruction.alu { return false }
+        if obj.pc != currentInstruction.pc { return false }
+        for adder in obj.adders { if !currentInstruction.adder!.contains(adder) { return false } }
+        return true
     }
 }
