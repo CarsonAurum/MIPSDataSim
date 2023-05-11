@@ -7,7 +7,6 @@ Learning from common experience and popular studies (like the one completed at T
 we believed that a fast-paced, dynamic gameplay would be the best way to achieve this goal. 
 As such, we worked this semester to build a MIPS simulator built around the concept of dragging elements onto a 
 workbench before connecting them together appropriately in a given length of time.
-    
 
 From the beginning, we knew that this would be a grand task that would take a broad scope of planning and general knowledge to carry 
 out. Due to the nature of the MIPS ISA’s core instruction set being 58 instructions, we knew that we would be unable to complete a 
@@ -25,9 +24,34 @@ of the game:
   2. An output cannot be connected to another output.
   3. An input, once connected to an output, retains its connection, and it cannot be connected to another element.
 
-
 Because the state of the UI makes the inner mechanics of this game effectively un testable, this document provides a walk through 
 of the mechanisms at play in simulating the MIPS architecture, providing input validation, and for verifying accuracy of answers at
 the end of a game.
 
 
+## Game Architecture
+
+The architecture of our game relies on a simplified react-style MVVM structure. There are three core components to gameplay: 
+`GameSettings`, `GameManager`, and `MIPSProcessor`. These three objects contain all state data relating to the game at any 
+point in time. 
+
+Within the processor, additional data structures are created and maintained for each kind of datapath element in order 
+to facilitate tracking of individual connections within a given component. Each data structure maps to a corresponding 
+DataStructureView (eg. `ALU` -> `ALUView`) object that handles displaying that element at all points during the game. 
+Using a select group of publishers, state changes are updated to all components of the view hierarchy simultaneously. 
+
+`GameSettings`, maintained in the corresponding object, are only able to be modified before the game is started.
+Most game settings at this time are related to timing, but there is much potential for future expansion in this department.
+
+Finally, the `GameManager` object controls the verification of the datapath. When the game board is generated, the `GameManager` is 
+called to produce an appropriate instruction from the predefined bank of instructions. To facilitate expandability, the manager 
+reads an internal property list to get details regarding each instruction. These details are dynamically mapped into an 
+`Instruction` object for comparison. This object contains an object in the correct predefined state for each component in the 
+datapath to facilitate easy comparison at the point of grading. Once the timer runs out, or the stop button is hit 
+(whichever comes first), grading occurs and the instruction is recycled.
+
+Ideally, there would be a fourth state object to identify players and manager scores and other data across multiple sessions. At 
+this moment, this functionality remains unimplemented.
+
+
+## Code Snippets
