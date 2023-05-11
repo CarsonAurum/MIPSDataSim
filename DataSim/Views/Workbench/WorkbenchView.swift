@@ -31,6 +31,8 @@ struct WorkbenchView: View {
     @State private var selectedQuit: Bool = false
     @State private var timerColor: Color = .primary
     
+    @State private var viewPositions: [UUID: CGSize] = [:]
+    
     
     // TODO: - Scaling & Panning
     
@@ -168,10 +170,26 @@ struct WorkbenchView: View {
                 ALUView(obj: $alu, curSelection: $selectedElement)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
-                    .position(x: 30, y: 30)
+//                    .position(x: 30, y: 30)
+                    .position(x: viewPositions[alu.id]?.width ?? 30, y: viewPositions[alu.id]?.height ?? 30)
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                let current = self.viewPositions[alu.id] ?? CGSize(width: 30, height: 30)
+                                self.viewPositions[alu.id] = CGSize(width: current.width + value.translation.width, height: current.height + value.translation.height)
+                            }
+                            .onEnded { value in
+                                let current = self.viewPositions[alu.id] ?? CGSize(width: 30, height: 30)
+                                self.viewPositions[alu.id] = CGSize(width: current.width + value.translation.width, height: current.height + value.translation.height)
+                            }
+
+                    )
             }
             ForEach($proc.adders, id: \.self) { $adder in
                 AdderView(obj: $adder, curSelection: $selectedElement)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 150)
+                    .position(x: 30, y: 30)
             }
         }
     }
@@ -192,7 +210,6 @@ struct WorkbenchView: View {
                     //                                          y: CGFloat((50...500).randomElement()!))
                     //                        }
                 }
-                           .coordinateSpace(name: "workbench.scroll")
                            .onTapGesture {
                                if selectedElement != nil {
                                    switch selectedElement!.1 {

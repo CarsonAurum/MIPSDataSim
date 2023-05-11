@@ -10,6 +10,8 @@ import Foundation
 class MIPSProcessor: ObservableObject {
     @Published var alus: [ALU] = []
     @Published var adders: [Adder] = []
+    @Published var pc: ProgramCounter? = nil
+    @Published var signExtenders: [SignExtender] = []
     
     
     struct Datapath {
@@ -22,5 +24,7 @@ class MIPSProcessor: ObservableObject {
     func reset() {
         alus.removeAll()
         adders.removeAll()
+        pc = nil
+        signExtenders.removeAll()
     }
 }

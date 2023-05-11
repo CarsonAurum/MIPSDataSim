@@ -12,8 +12,8 @@ public enum DatapathComponent: String, CaseIterable, Equatable, Hashable {
     case adder      = "Adder",
          alu        = "ALU",
          mux        = "Mux",
-         signExt    = "Sign Ext"
-    //     pc         = "PC"
+         signExt    = "Sign Ext",
+         pc         = "PC"
     // TODO:     regfile    = "Reg File
     // TODO:     instMem    = "IM"
     // TODO:     dataMem    = "DM"
@@ -54,6 +54,8 @@ extension DatapathElement {
             return "Multiplexor"
         case .signExt:
             return "Sign Extension Unit"
+        case .pc:
+            return "Program Counter"
         }
     }
 }
