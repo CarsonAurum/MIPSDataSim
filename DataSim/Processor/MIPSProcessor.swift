@@ -13,14 +13,6 @@ class MIPSProcessor: ObservableObject {
     @Published var pc: ProgramCounter? = nil
     @Published var signExtenders: [SignExtender] = []
     
-    
-    struct Datapath {
-        var srcID: UUID
-        var srcType: DatapathComponent
-        
-        var destID: UUID
-    }
-    
     func reset() {
         alus.removeAll()
         adders.removeAll()
