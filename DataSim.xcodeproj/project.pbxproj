@@ -14,9 +14,6 @@
 		E531825929C93438004A9793 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531825829C93438004A9793 /* MainView.swift */; };
 		E531825B29C93439004A9793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531825A29C93439004A9793 /* Assets.xcassets */; };
 		E531825F29C93439004A9793 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E531825E29C93439004A9793 /* Preview Assets.xcassets */; };
-		E531826929C9343A004A9793 /* DataSimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531826829C9343A004A9793 /* DataSimTests.swift */; };
-		E531827329C9343A004A9793 /* DataSimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531827229C9343A004A9793 /* DataSimUITests.swift */; };
-		E531827529C9343A004A9793 /* DataSimUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */; };
 		E531828429C9354E004A9793 /* ALUShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531828329C9354E004A9793 /* ALUShape.swift */; };
 		E538518A29CB65C200CF59DA /* ALUView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538518929CB65C200CF59DA /* ALUView.swift */; };
 		E54F8B6429DB38EB00022498 /* WorkbenchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F8B6329DB38EB00022498 /* WorkbenchView.swift */; };
@@ -52,23 +49,6 @@
 		E5FC120F29F868A5006804C6 /* PCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC120E29F868A5006804C6 /* PCView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E531826529C9343A004A9793 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E531824B29C93438004A9793 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E531825229C93438004A9793;
-			remoteInfo = DataSim;
-		};
-		E531826F29C9343A004A9793 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E531824B29C93438004A9793 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E531825229C93438004A9793;
-			remoteInfo = DataSim;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		E51B591829F9750E00C981A8 /* Bubblegum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubblegum.ttf; sourceTree = "<group>"; };
 		E51B591A29F975D700C981A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -80,11 +60,6 @@
 		E531825A29C93439004A9793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E531825C29C93439004A9793 /* DataSim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataSim.entitlements; sourceTree = "<group>"; };
 		E531825E29C93439004A9793 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E531826429C9343A004A9793 /* DataSimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E531826829C9343A004A9793 /* DataSimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimTests.swift; sourceTree = "<group>"; };
-		E531826E29C9343A004A9793 /* DataSimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E531827229C9343A004A9793 /* DataSimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimUITests.swift; sourceTree = "<group>"; };
-		E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSimUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E531828329C9354E004A9793 /* ALUShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUShape.swift; sourceTree = "<group>"; };
 		E538518929CB65C200CF59DA /* ALUView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUView.swift; sourceTree = "<group>"; };
 		E54F8B6329DB38EB00022498 /* WorkbenchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchView.swift; sourceTree = "<group>"; };
@@ -129,20 +104,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E531826129C9343A004A9793 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E531826B29C9343A004A9793 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -160,8 +121,6 @@
 			children = (
 				E57D2E252A0DB56400DE5026 /* README.md */,
 				E531825529C93438004A9793 /* DataSim */,
-				E531826729C9343A004A9793 /* DataSimTests */,
-				E531827129C9343A004A9793 /* DataSimUITests */,
 				E531825429C93438004A9793 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,8 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				E531825329C93438004A9793 /* DataSim.app */,
-				E531826429C9343A004A9793 /* DataSimTests.xctest */,
-				E531826E29C9343A004A9793 /* DataSimUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,23 +155,6 @@
 				E531825E29C93439004A9793 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E531826729C9343A004A9793 /* DataSimTests */ = {
-			isa = PBXGroup;
-			children = (
-				E531826829C9343A004A9793 /* DataSimTests.swift */,
-			);
-			path = DataSimTests;
-			sourceTree = "<group>";
-		};
-		E531827129C9343A004A9793 /* DataSimUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E531827229C9343A004A9793 /* DataSimUITests.swift */,
-				E531827429C9343A004A9793 /* DataSimUITestsLaunchTests.swift */,
-			);
-			path = DataSimUITests;
 			sourceTree = "<group>";
 		};
 		E531828129C934EF004A9793 /* Views */ = {
@@ -335,42 +275,6 @@
 			productReference = E531825329C93438004A9793 /* DataSim.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E531826329C9343A004A9793 /* DataSimTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E531827B29C9343A004A9793 /* Build configuration list for PBXNativeTarget "DataSimTests" */;
-			buildPhases = (
-				E531826029C9343A004A9793 /* Sources */,
-				E531826129C9343A004A9793 /* Frameworks */,
-				E531826229C9343A004A9793 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E531826629C9343A004A9793 /* PBXTargetDependency */,
-			);
-			name = DataSimTests;
-			productName = DataSimTests;
-			productReference = E531826429C9343A004A9793 /* DataSimTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E531826D29C9343A004A9793 /* DataSimUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E531827E29C9343A004A9793 /* Build configuration list for PBXNativeTarget "DataSimUITests" */;
-			buildPhases = (
-				E531826A29C9343A004A9793 /* Sources */,
-				E531826B29C9343A004A9793 /* Frameworks */,
-				E531826C29C9343A004A9793 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E531827029C9343A004A9793 /* PBXTargetDependency */,
-			);
-			name = DataSimUITests;
-			productName = DataSimUITests;
-			productReference = E531826E29C9343A004A9793 /* DataSimUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -383,14 +287,6 @@
 				TargetAttributes = {
 					E531825229C93438004A9793 = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					E531826329C9343A004A9793 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = E531825229C93438004A9793;
-					};
-					E531826D29C9343A004A9793 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = E531825229C93438004A9793;
 					};
 				};
 			};
@@ -411,8 +307,6 @@
 			projectRoot = "";
 			targets = (
 				E531825229C93438004A9793 /* DataSim */,
-				E531826329C9343A004A9793 /* DataSimTests */,
-				E531826D29C9343A004A9793 /* DataSimUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -426,20 +320,6 @@
 				E531825B29C93439004A9793 /* Assets.xcassets in Resources */,
 				E56CFB232A0D866700E85259 /* data.plist in Resources */,
 				E51B591929F9750E00C981A8 /* Bubblegum.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E531826229C9343A004A9793 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E531826C29C9343A004A9793 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,37 +368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E531826029C9343A004A9793 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E531826929C9343A004A9793 /* DataSimTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E531826A29C9343A004A9793 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E531827529C9343A004A9793 /* DataSimUITestsLaunchTests.swift in Sources */,
-				E531827329C9343A004A9793 /* DataSimUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E531826629C9343A004A9793 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E531825229C93438004A9793 /* DataSim */;
-			targetProxy = E531826529C9343A004A9793 /* PBXContainerItemProxy */;
-		};
-		E531827029C9343A004A9793 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E531825229C93438004A9793 /* DataSim */;
-			targetProxy = E531826F29C9343A004A9793 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E531827629C9343A004A9793 /* Debug */ = {
@@ -714,92 +564,6 @@
 			};
 			name = Release;
 		};
-		E531827C29C9343A004A9793 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSimTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataSim.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DataSim";
-			};
-			name = Debug;
-		};
-		E531827D29C9343A004A9793 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSimTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataSim.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DataSim";
-			};
-			name = Release;
-		};
-		E531827F29C9343A004A9793 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSimUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DataSim;
-			};
-			name = Debug;
-		};
-		E531828029C9343A004A9793 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = us.arcstone.DataSimUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DataSim;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -817,24 +581,6 @@
 			buildConfigurations = (
 				E531827929C9343A004A9793 /* Debug */,
 				E531827A29C9343A004A9793 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E531827B29C9343A004A9793 /* Build configuration list for PBXNativeTarget "DataSimTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E531827C29C9343A004A9793 /* Debug */,
-				E531827D29C9343A004A9793 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E531827E29C9343A004A9793 /* Build configuration list for PBXNativeTarget "DataSimUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E531827F29C9343A004A9793 /* Debug */,
-				E531828029C9343A004A9793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

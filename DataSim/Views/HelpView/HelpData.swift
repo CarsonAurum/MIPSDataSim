@@ -17,7 +17,14 @@ protocol HelpInfo {
 struct HelpData {
     static let info: [DatapathComponent: HelpInfo] = [
         .alu: HelpData.ALU(),
-        .regfile: HelpData.RegFile()
+        .regfile: HelpData.RegFile(),
+        .mux: HelpData.Mux(),
+        .adder: HelpData.Adder(),
+        .signExt: HelpData.SignExtension(),
+        .shifter: HelpData.Shifter(),
+        .pc: HelpData.ProgramCounter(),
+        .instMem: HelpData.InstructionMemory(),
+        .dataMem: HelpData.DataMemory()
     ]
     struct ALU: HelpInfo {
         let action: String =
@@ -52,18 +59,60 @@ struct HelpData {
         ]
     }
     
-    /*
+    
     struct Mux: HelpInfo {
-        
+        let action: String =
+            "A Multiplexor (Mux) connects two outputs to a single input, allowing selection between them with a control signal"
+        let inputs: String =
+            "There are two inputs given to the mux, from which it can pick."
+        let outputs: String = "Of the two given inputs, one is selected to be forwarded."
+        let uses: [String] = [
+            "Enables switching between different registers for a variety of instructions on the same datapath circuit.",
+            "Dynamically allows selection of the program counter's source."
+        ]
     }
     
     struct Adder: HelpInfo {
-        
+        let action: String = ""
+        let inputs: String = ""
+        let outputs: String = ""
+        let uses: [String] = []
     }
     
     struct SignExtension: HelpInfo {
-        
+        let action: String = ""
+        let inputs: String = ""
+        let outputs: String = ""
+        let uses: [String] = []
     }
-    */
+    
+    struct Shifter: HelpInfo {
+        let action: String = ""
+        let inputs: String = ""
+        let outputs: String = ""
+        let uses: [String] = []
+    }
+    
+    struct ProgramCounter: HelpInfo {
+        let action: String = ""
+        let inputs: String = ""
+        let outputs: String = ""
+        let uses: [String] = []
+    }
+    
+    struct InstructionMemory: HelpInfo {
+        let action: String = ""
+        let inputs: String = ""
+        let outputs: String = ""
+        let uses: [String] = []
+    }
+    
+    struct DataMemory: HelpInfo {
+        let action: String = ""
+        let inputs: String = ""
+        let outputs: String = ""
+        let uses: [String] = []
+    }
+    
     static func getInfo(for kind: DatapathComponent) -> HelpInfo { info[kind]! }
 }

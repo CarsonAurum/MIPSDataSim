@@ -31,7 +31,7 @@ struct DatapathElementPreviewView: View {
         case .dataMem:
             DMemView()
         case .shifter:
-            EmptyView()
+            ShifterView()
 
         }
     }

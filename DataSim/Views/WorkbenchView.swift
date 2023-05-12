@@ -29,6 +29,8 @@ struct WorkbenchView: View {
     /// not cause changes in the UI.
     @State private var selectedElement: (UUID, DatapathComponent, DatapathComponent.Connection)? = nil
     @State private var selectedQuit: Bool = false
+    @State private var isOver: Bool = false
+    @State private var didWin: Bool  = false
     @State private var timerColor: Color = .primary
     
     @State private var viewPositions: [UUID: CGSize] = [:]
@@ -73,6 +75,11 @@ struct WorkbenchView: View {
                             selectedQuit = false
                         })
                     }
+                    
+                    .fullScreenCover(isPresented: $isOver) {
+                        GameOverPopup(didWin: didWin) { quitGame() }
+                    }
+                    
                 }
                 Spacer()
                 if settings.enableTimer {
@@ -238,9 +245,45 @@ struct WorkbenchView: View {
             self.timerColor = [.red, .yellow, .primary].randomElement() ?? .primary
            }
         // Call the grader
-        manager.grade()
+        didWin = manager.grade(proc)
+        isOver = true
     }
 }
+
+struct GameOverPopup: View {
+    @Environment(\.colorScheme) var colorScheme
+    let didWin: Bool
+    let onQuit: () -> Void
+
+    var body: some View {
+        ZStack {
+            VStack {
+                Text(didWin ? "Congratulations!" : "Good luck next time")
+                    .foregroundColor(.primary)
+                    .font(.customBody)
+                    .padding()
+
+                Text("You will return to the main menu.")
+                    .foregroundColor(.primary)
+                    .font(.customSubtitle)
+                    .padding()
+
+                Button(action: onQuit) {
+                    Text("Quit")
+                        .font(.customCaption)
+                        .padding()
+                        .foregroundColor(.primary)
+                        .background(Color.red)
+                        .cornerRadius(10)
+                }
+            }
+            .frame(width: 300, height: 200)
+            .background(colorScheme == .light ? Color.white : Color.black)
+            .cornerRadius(20)
+        }
+    }
+}
+
 
 struct QuitPopup: View {
     
