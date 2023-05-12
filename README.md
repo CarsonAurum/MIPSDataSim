@@ -75,7 +75,7 @@ Once instructions have been written out in this manner, the process of creating 
 <details> 
     <summary>Instruction Importing</summary>
     
-  ![Instruction Encoding](img/instruction_importing.png)
+  ![Instruction Encoding](img/instruction_import.png)
 </details>
 
 The whole process of loading individual instructions, and subsequently selecting an instruction to use within the program, is carried out
