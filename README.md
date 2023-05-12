@@ -55,3 +55,57 @@ this moment, this functionality remains unimplemented.
 
 
 ## Code Snippets
+
+In the following sections, various techniques used internally within this game to model and validate the datapath are explored in 
+more detail. This section is to provide more detail behind the mechanisms that are unable to be tested by the application in its current
+status.
+
+
+### Instruction Encoding
+
+To facilitate the expandability of this game, each correct answer is codified inside the game's `data.plist` file. The nested dictionary structure
+provides key details for each element of the datapath, along with the corresponding usage and name, in a way that can be read programmatically:
+<details> 
+    <summary>Instruction Encoding</summary>
+    
+  ![Instruction Encoding](img/instruction_coding.png)
+</details>
+
+Once instructions have been written out in this manner, the process of creating a new `Instruction` is fairly straight-forward:
+<details> 
+    <summary>Instruction Importing</summary>
+    
+  ![Instruction Encoding](img/instruction_importing.png)
+</details>
+
+The whole process of loading individual instructions, and subsequently selecting an instruction to use within the program, is carried out
+within the `GameManager` at initialization time, making gameplay very quick at the expense of a slight increase in load times.
+
+<details> 
+    <summary>Instruction Import Management</summary>
+    
+  ![Instruction Encoding](img/instruction_importing.png)
+</details>
+
+### Input Handling
+
+Although the UI itself is not complete, the functionality behind selecting and completing connections is functional! Each connection on a datapath element
+is represented internally with its own tuple containing the relevant destination data. Therefore, handling inputs is quite simple for both inputs and outputs:
+
+<details> 
+    <summary>Input Handling - Input Connections</summary>
+    
+  ![Instruction Encoding](img/input_selection.png)
+</details>
+<details> 
+    <summary>Input Handling - Output Connections</summary>
+    
+  ![Instruction Encoding](img/output_selection.png)
+</details>
+
+Due to the reactive style of the game, merely modifying these connection variables is enough to trigger UI updates that redraw the UI appropriately, with the new
+connections added. 
+
+### Grading
+
+
