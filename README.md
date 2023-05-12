@@ -130,6 +130,4 @@ Although not completed to the scope required for a full scale implementation of 
 Although this application did not get to the level of completeness that our group initialially set out to obtain, we firmly believe that this application has a strong base in reality, provides a vast range of knowledge (through the datapath hints tools) and is more than capable of being expanded to support future students in their datapath endeavors.
 
 --
-Carson Rau
-Dillon Fleharty
-Rene Carbajal
+Carson Rau, Dillon Fleharty, Rene Carbajal
