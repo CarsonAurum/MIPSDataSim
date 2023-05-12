@@ -89,6 +89,7 @@
 		E57D2E212A0DAE2500DE5026 /* HelpDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailView.swift; sourceTree = "<group>"; };
 		E57D2E232A0DAE8D00DE5026 /* HelpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpData.swift; sourceTree = "<group>"; };
 		E57D2E252A0DB56400DE5026 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E57D2E272A0DC9C500DE5026 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5C39C6A2A0DA93B0023869C /* DMemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMemView.swift; sourceTree = "<group>"; };
 		E5C39C6C2A0DA95B0023869C /* ShifterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShifterView.swift; sourceTree = "<group>"; };
 		E5FC120C29F862CD006804C6 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		E531824A29C93438004A9793 = {
 			isa = PBXGroup;
 			children = (
+				E57D2E262A0DC92300DE5026 /* img */,
 				E57D2E252A0DB56400DE5026 /* README.md */,
 				E531825529C93438004A9793 /* DataSim */,
 				E531825429C93438004A9793 /* Products */,
@@ -250,6 +252,14 @@
 				E57D2E232A0DAE8D00DE5026 /* HelpData.swift */,
 			);
 			path = HelpView;
+			sourceTree = "<group>";
+		};
+		E57D2E262A0DC92300DE5026 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E57D2E272A0DC9C500DE5026 /* README.md */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
