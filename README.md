@@ -107,5 +107,29 @@ Due to the reactive style of the game, merely modifying these connection variabl
 connections added. 
 
 ### Grading
+At the finish of the game, the `GameManager`'s `grade()` method must be called to evaluate the status of the `MIPSProcessor`. This function is fairly trivial, going through
+each datapath component group and calling the `==` operator.
 
+<details> 
+    <summary>Grading</summary>
+    
+  ![Instruction Encoding](img/grading.png)
+</details>
 
+Each component of the datapath has an overload of this operator to enable custom comparison of the specific component pieces required for a given instruction:
+
+<details> 
+    <summary>Testing For Equality</summary>
+    
+  ![Instruction Encoding](img/datapath_equality.png)
+</details>
+
+Although not completed to the scope required for a full scale implementation of the datapath, due to timing and complexity constraints, this is a robust grading system that is setup to handle all varieties of MIPS instructions.
+
+## Conclusions
+Although this application did not get to the level of completeness that our group initialially set out to obtain, we firmly believe that this application has a strong base in reality, provides a vast range of knowledge (through the datapath hints tools) and is more than capable of being expanded to support future students in their datapath endeavors.
+
+--
+Carson Rau
+Dillon Fleharty
+Rene Carbajal
